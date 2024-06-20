@@ -1,0 +1,53 @@
+---
+import removeTrailingSlash from "../utils/removeTrailingSlash";
+import SocialLinks from "../components/SocialLinks.astro";
+
+const pathname = removeTrailingSlash(Astro.url.pathname);
+---
+
+<header class="z-40 flex w-full flex-col gap-2 md:flex-row md:justify-between">
+  <nav role="navigation">
+    <ul role="list" class="flex flex-row gap-2">
+      <li>
+        <a
+          href="/"
+          class:list={{
+            ["hover:text-teal-500"]: true,
+            ["text-neutral-100"]: pathname === "/",
+          }}>Home</a
+        >
+      </li>
+      <li>/</li>
+      <li>
+        <a
+          href="/about"
+          class:list={{
+            ["hover:text-teal-500"]: true,
+            ["text-neutral-100"]: pathname === "/about",
+          }}>About</a
+        >
+      </li>
+      <li>/</li>
+      <li>
+        <a
+          href="/experience"
+          class:list={{
+            ["hover:text-teal-500"]: true,
+            ["text-neutral-100"]: pathname === "/experience",
+          }}>Experience</a
+        >
+      </li>
+      <li>/</li>
+      <li>
+        <a
+          href="/projects"
+          class:list={{
+            ["hover:text-teal-500"]: true,
+            ["text-neutral-100"]: pathname === "/projects",
+          }}>Projects</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <SocialLinks />
+</header>
