@@ -15,10 +15,9 @@ type Social = {
   const presentation: Presentation = {
     mail: "ghita28loukili@gmail.com",
     title: "*Hi*, I’m Ghita ",
-    profile: "/profile_image.jpg",
-    description:
-      "**IT** System Technician actively transitioning towards a more **coding**-focused career. I am dedicated to honing my expertise in **B**ackend using **Python** and expanding my capabilities in **F**rontend with **NextJS** and **Astro**. Fascinated by **AI** and its potential, exploring **Machine Learning** and **LLM**'s.",
-  
+    profile: "/profile.png",
+    description: 
+      "**Software Engineering** student and passionate IT enthusiast. I am dedicated to mastering **Backend** using **Java** and **Spring Boot**, while also expanding my expertise in **Mobile Development** with **React Native**. With a keen interest in **DevOps** and **Cloud Computing**, I am eager to delve deeper into these fields and explore their potential.",
     socials: [
       {
         label: "Github",

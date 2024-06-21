@@ -4,7 +4,7 @@ import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a"> & {
   label: string;
-  icon: string;
+  icon?: string;
   isUnderline?: boolean;
 };
 
@@ -21,7 +21,7 @@ const { label, icon, isUnderline, ...props } = Astro.props;
   rel="noreferrer"
   target="_blank"
 >
-  <Icon name={icon} class="social-icon" />
+  {icon && <Icon name={icon} class="social-icon" />}
   <span class="sr-only">{label} link</span>
 </a>
 
