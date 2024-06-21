@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Link from "../components/shared/Link.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 import presentation from "../data/presentation";
 import convertAsteriskToStrongTag from "../utils/convertAsterikToStrongTag";
 import { getCollection } from "astro:content";
@@ -51,7 +52,7 @@ const projects = (await getCollection("projects")).sort(function (
       </header>
 
       <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
-        <!-- {
+        {
           projects
             .slice(0, 4)
             .map((project: { data: { title: any; description: any; img_logo: { src: any; alt: any; }; image: { src: any; }; technologies: any; }; slug: any; }) => (
@@ -65,7 +66,7 @@ const projects = (await getCollection("projects")).sort(function (
                 technologies={project.data.technologies}
               />
             ))
-        } -->
+        }
       </section>
     </article>
   </main>

@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.salute-animation {
+    transform-origin: bottom center;
+}
+.salute-animation:hover {
+    @apply animate-tilt;
+}
+
+.image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    transform: scale(1.3);
+  }
+  
+.email-icon-vibration {
+  margin-bottom: 0.28em;
+}
+
+.email-icon-vibration:hover {
+  @apply animate-vibration;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
+.image-logo {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+.image-main {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  display: none;
+}
+
+@media (min-width: 568px) {
+  .image-logo.with-logo {
+    transition: opacity 100ms ease-in-out;
+  }
+
+  .image-main.with-logo {
+    display: block;
+    transition: transform 500ms ease-in-out;
+    transform: translateY(100%);
+  }
+
+  .group:hover .image-logo.with-logo {
+    opacity: 0; 
+  }
+
+  .group:hover .image-main.with-logo {
+    transform: translateY(0); 
+  }
+}
+
+.description_project {
+  text-wrap: balance;
+}
+/* Mobile devices */
+@media (max-width: 767px) {
+  :root {
+    --view-transition-name: none;
+  }
+}

@@ -1,0 +1,79 @@
+---
+type Technology = {
+  name: string;
+  route: string;
+};
+type Props = {
+  title: string;
+  description: string;
+  slug: string;
+  img_logo: string;
+  imgAlt: string;
+  technologies: Technology[];
+  image: string;
+
+};
+
+const { title, description, slug, img_logo, image, imgAlt, technologies } = Astro.props;
+---
+
+<a
+  class="group relative max-w-sm cursor-pointer flex flex-col gap-2 rounded-md border border-neutral-700 p-5 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-400 z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:5px_5px] "
+  transition:name={`${image} image`}
+  href={`/projects/${slug}`
+}
+>
+<div class="relative h-40 overflow-hidden rounded-md">
+  {img_logo ? (
+    <img
+      src={img_logo}
+      alt={imgAlt}
+      class="image-logo"
+      />
+      ) : null}
+  
+  {image ? (
+    <img
+    src={image}
+    alt={imgAlt}
+    class={`image-main ${img_logo ? 'with-logo' : ''}`}
+
+    />
+  ) : null}
+</div>
+  <div
+  class="flex w-full justify-center items-center gap-2 md:flex-row"
+  >
+  <div class="flex flex-row items-center gap-1">
+    <p class="text-neutral-100 text-xl">{title}</p>
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 18 18"
+        fill="none"
+        class="transition-all duration-300 group-hover:translate-x-1"
+      >
+        <path
+          d="M5.25 12.75L12.75 5.25"
+          stroke="#14b8a5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M5.25 5.25H12.75V12.75"
+          stroke="#14b8a5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+      </div>
+  </div>
+  <p class="description_project">
+    {description}
+  </p>
+  <div class="flex flex-row flex-wrap pt-4 gap-2 justify-center">
+    {technologies.map((tech) => {
+      return (
+        <img src={tech.route} alt={tech.name} class="h-5"/>
+      );
+    })}
+  </div>
+</a>
