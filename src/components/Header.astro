@@ -1,19 +1,23 @@
 ---
 import removeTrailingSlash from "../utils/removeTrailingSlash";
 import SocialLinks from "../components/SocialLinks.astro";
+import { RESUME_LINK } from "../data/config";
+import { Icon } from "astro-icon/components";
 
 const pathname = removeTrailingSlash(Astro.url.pathname);
 ---
 
 <header class="z-40 flex w-full flex-col gap-2 md:flex-row md:justify-between">
   <nav role="navigation">
-    <ul role="list" class="flex flex-row gap-2">
+    <ul role="list" class="flex flex-row gap-2 items-center">
       <li>
         <a
           href="/"
           class:list={{
-            ["hover:text-teal-500"]: true,
-            ["text-neutral-100"]: pathname === "/",
+            ["bg-teal-500"]: pathname === "/",
+            ["hover:bg-teal-500 transition duration-300 ease-in-out"]: true,
+            ["text-white"]: true,
+            ["py-1.5 px-2 rounded-md flex items-center"]: true,
           }}>Home</a
         >
       </li>
@@ -22,8 +26,10 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
         <a
           href="/about"
           class:list={{
-            ["hover:text-teal-500"]: true,
-            ["text-neutral-100"]: pathname === "/about",
+            ["bg-teal-500"]: pathname === "/about",
+            ["hover:bg-teal-500 transition duration-300 ease-in-out"]: true,
+            ["text-white"]: true,
+            ["py-1.5 px-2 rounded-md flex items-center"]: true,
           }}>About</a
         >
       </li>
@@ -32,8 +38,10 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
         <a
           href="/experience"
           class:list={{
-            ["hover:text-teal-500"]: true,
-            ["text-neutral-100"]: pathname === "/experience",
+            ["bg-teal-500"]: pathname === "/experience",
+            ["hover:bg-teal-500 transition duration-300 ease-in-out"]: true,
+            ["text-white"]: true,
+            ["py-1.5 px-2 rounded-md flex items-center"]: true,
           }}>Experience</a
         >
       </li>
@@ -42,10 +50,26 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
         <a
           href="/projects"
           class:list={{
-            ["hover:text-teal-500"]: true,
-            ["text-neutral-100"]: pathname === "/projects",
+            ["bg-teal-500"]: pathname === "/projects",
+            ["hover:bg-teal-500 transition duration-300 ease-in-out"]: true,
+            ["text-white"]: true,
+            ["py-1.5 px-2 rounded-md flex items-center"]: true,
           }}>Projects</a
         >
+      </li>
+      <li>/</li>
+      <li>
+        <a
+          href={RESUME_LINK}
+          class:list={{
+            ["bg-teal-500"]: pathname === RESUME_LINK,
+            ["hover:bg-teal-500 transition duration-300 ease-in-out"]: true,
+            ["text-white"]: true,
+            ["py-1.5 px-2 rounded-md flex items-center"]: true,
+          }}>
+          Resume
+          <Icon name="lets-icons:external" class="ml-1 w-4 h-4" />
+        </a>
       </li>
     </ul>
   </nav>

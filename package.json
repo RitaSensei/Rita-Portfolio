@@ -12,6 +12,11 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@iconify-json/akar-icons": "^1.1.24",
+    "@iconify-json/iconoir": "^1.1.44",
+    "@iconify-json/lets-icons": "^1.1.2",
+    "@iconify-json/mdi": "^1.1.67",
+    "@iconify-json/pajamas": "^1.1.46",
     "astro": "^4.11.0",
     "astro-seo": "^0.8.4",
     "prettier-plugin-tailwindcss": "^0.6.5",
@@ -19,6 +24,7 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "astro-icon": "^1.1.0",
     "eslint": "^9.5.0",
     "eslint-plugin-astro": "^1.2.2",
     "prettier": "^3.3.2",

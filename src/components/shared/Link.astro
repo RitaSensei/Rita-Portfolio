@@ -1,24 +1,33 @@
 ---
+import { Icon } from "astro-icon/components";
 import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a"> & {
   label: string;
+  icon: string;
   isUnderline?: boolean;
 };
 
-const { label, isUnderline, ...props } = Astro.props;
+const { label, icon, isUnderline, ...props } = Astro.props;
 ---
 
 <a
   href={props.href}
   class:list={{
-    ["hover:text-indigo-500 cursor-pointer transition duration-300 ease-in-out"]: true,
-    ["text-indigo-100"]: isUnderline,
+    ["hover:text-teal-500 cursor-pointer transition duration-300 ease-in-out"]: true,
+    ["text-white"]: isUnderline,
   }}
   {...props}
   rel="noreferrer"
   target="_blank"
 >
-  {label}
+  <Icon name={icon} class="social-icon" />
   <span class="sr-only">{label} link</span>
 </a>
+
+<style>
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+</style>

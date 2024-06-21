@@ -1,6 +1,7 @@
 type Social = {
     label: string;
     link: string;
+    icon : string;
   };
   
   type Presentation = {
@@ -22,15 +23,23 @@ type Social = {
       {
         label: "Github",
         link: "https://github.com/GhitaLoukili",
+        icon : "iconoir:github",
       },
       {
         label: "LinkedIn",
         link: "https://www.linkedin.com/in/ghita-loukili-46405924a/",
+        icon : "akar-icons:linkedin-v1-fill",
       },
       {
         label: "X",
         link: "https://x.com/GhitaSensei",
+        icon : "pajamas:twitter",
       },
+      {
+        label: "Email",
+        link: "mailto:ghita28loukili@gmail.com",
+        icon : "mdi:email-outline",
+      }
     ],
   };
   
