@@ -9,7 +9,7 @@ image:
 img_logo: 
   src: ""
   alt: ""
-github: "https://github.com/GhitaLoukili/Rita-Portfolio"
+github: "https://github.com/RitaSensei/Rita-Portfolio"
 website: "https://rita.sensei.dev/"
 technologies:
   - name: "Astro"
@@ -52,6 +52,6 @@ All commands are run from the root of the project, from a terminal:
 
 
 <div style="display: flex; justify-content: center; padding-top: 40px">
-  <img src="https://img.shields.io/github/stars/GhitaLoukili/Rita-Portfolio" alt="GitHub Stars" style="margin-right: 10px;"/>
-  <img src="https://img.shields.io/github/last-commit/GhitaLoukili/Rita-Portfolio" alt="GitHub Last Commit" />
+  <img src="https://img.shields.io/github/stars/RitaSensei/Rita-Portfolio" alt="GitHub Stars" style="margin-right: 10px;"/>
+  <img src="https://img.shields.io/github/last-commit/RitaSensei/Rita-Portfolio" alt="GitHub Last Commit" />
 </div>

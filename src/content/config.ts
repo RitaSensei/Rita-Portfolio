@@ -16,7 +16,7 @@ const projectsCollection = defineCollection({
       alt: z.string(),
     }),
     github: z.string(),
-    website: z.string(),
+    website: z.string().optional(),
     technologies: z.array(z.object({
       name: z.string(),
       route: z.string(),
