@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -29,14 +30,24 @@ const description = project.data.description;
   <main class="project mx-auto flex w-9/12 flex-col gap-4">
     <div role="list" class="flex flex-row gap-2 justify-center" >
       {project.data.github && (
-        <a href={project.data.github} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} class="text-teal-100 hover:text-teal-500 cursor-pointer">
-          Github
+        <a
+          href={project.data.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none' }}
+          class="text-teal-100 hover:text-teal-500 cursor-pointer">
+          <Icon name="iconoir:github" size={26} />
         </a>
       )}
       {project.data.github && project.data.website && <> / </>}
       {project.data.website && (
-        <a href={project.data.website} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} class="text-teal-100 hover:text-teal-500 cursor-pointer ">
-          Website
+        <a
+         href={project.data.website}
+         target="_blank"
+         rel="noopener noreferrer"
+         style={{ textDecoration: 'none' }}
+         class="text-teal-100 hover:text-teal-500 cursor-pointer ">
+          <Icon name="iconoir:www" size={26} />
         </a>
       )}
     </div>

@@ -1,35 +1,42 @@
 ---
-title: "UniHive Mobile"
-publishedAt: 2024-05-21
-description: "Mobile application for managing club events. It facilitates the creation, promotion, and coordination of club events, making it easy for students to discover the activities offered by various clubs."
-slug: "UniHive-Mobile"
+title: "UniHive Web"
+publishedAt: 2024-05-27
+description: "Web application for managing club events. It facilitates the creation, promotion, and coordination of club events, making it easy for students to discover the activities offered by various clubs."
+slug: "UniHive-Web"
 image: 
-  src: "/projects_images/unihive_mobile_screen.webp"
+  src: "/projects_images/unihive_web_page.webp"
   alt: "UniHive-Mobile-Screen"
 img_logo:
   src: "/projects_images/unihive_logo.webp"
   alt: "UniHive-Logo"
-github: "https://github.com/RitaSensei/UniHive-Mobile-App"
+github: "https://github.com/RitaSensei/UniHive-Web-App"
 technologies:
   - name: "Java"
     route: "/tech_logos/java.svg"
-  - name: "Android"
-    route: "/tech_logos/android.svg"
+  - name: "Typescript"
+    route: "/tech_logos/typescript.svg"
   - name: "Spring Boot"
     route: "/tech_logos/spring_boot.svg"
+  - name: "React"
+    route: "/tech_logos/react.svg"
   - name: "Supabase"
     route: "/tech_logos/supabase.svg"
   - name: "Figma"
     route: "/tech_logos/figma.svg"
   - name: "Google Cloud Platform"
     route: "/tech_logos/google_cloud.svg"
+  - name: "Google Calendar"
+    route: "/tech_logos/google_calendar.svg"
+  - name: "Github Actions"
+    route: "/tech_logos/github_actions.svg"
 ---
 
 
-## Unihive Mobile App
+## Unihive Web App
 
 
 UniHive is a comprehensive and efficient android application for managing club events. It facilitates the creation, promotion, and coordination of club events, making it easy for students to discover the activities offered by various clubs. It also provides students with the opportunity to join clubs at their school, thereby promoting their engagement in student life.
+
 
 ## Features
 
@@ -63,18 +70,43 @@ UniHive is a comprehensive and efficient android application for managing club e
      - Integration with Google Calendar for event scheduling.
      - Integration with Google Cloud Platform for storage.
 
-### 2. **Android Frontend**
-   - **Function**: Provides a user-friendly interface for students to interact with the application. Allows users to create accounts, view events, and join clubs.
-   - **Tech Stack**: Java, Android, Figma.
+### 2. **React Frontend**
+   - **Function**: Provides a user-friendly interface for students to interact with the backend services. Allows users to create accounts, view events, and join clubs.
+   - **Tech Stack**: TypeScript, React, Figma.
    - **Key Features**:
-     - User authentication and account creation.
-     - Event browsing and ticket reservation.
-     - Club discovery and membership.
-     - Calendar integration for event reminders.
-     - User rating and feedback system.
+    - User account creation and login.
+    - Event and club browsing.
+    - Club following and event reservation.
+    - Calendar integration for event scheduling.
+
+### 3. **Deployment**
+   - **Function**: Hosts the backend and frontend services on the Google Cloud Platform. Ensures high availability and scalability of the application.
+   - **Tech Stack**: GitHub Actions.
+   - **Key Features**:
+    - Continuous integration and deployment.
+
+
+## Setup and Installation
+
+### 1. **Prerequisites**
+  - JDK
+  - Node.js
+  - npm or yarn
+  - Supabase account
+
+### 2. **Backend Setup**
+  - Clone the repository.
+  - Set up a Supabase project and configure the environment variables.
+  - Run the Spring Boot application.
+
+### 3. **Frontend Setup**
+  - Clone the repository.
+  - Install the dependencies using npm or yarn.
+  - Configure the environment variables.
+  - Run the React application.
 
 
 <div style="display: flex; justify-content: center; padding-top: 40px">
-  <img src="https://img.shields.io/github/stars/RitaSensei/UniHive-Mobile-App" alt="GitHub Stars" style="margin-right: 10px;"/>
-  <img src="https://img.shields.io/github/last-commit/RitaSensei/UniHive-Mobile-App" alt="GitHub Last Commit" />
+  <img src="https://img.shields.io/github/stars/RitaSensei/UniHive-Web-App" alt="GitHub Stars" style="margin-right: 10px;"/>
+  <img src="https://img.shields.io/github/last-commit/RitaSensei/UniHive-Web-App" alt="GitHub Last Commit" />
 </div>

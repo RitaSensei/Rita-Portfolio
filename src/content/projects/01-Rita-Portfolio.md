@@ -7,8 +7,8 @@ image:
   src: "/projects_images/test_portfolio.webp"
   alt: "rita-portfolio"
 img_logo: 
-  src: ""
-  alt: ""
+  src: "/projects_images/rita_portfolio_logo.webp"
+  alt: "rita-portfolio-logo"
 github: "https://github.com/RitaSensei/Rita-Portfolio"
 website: "https://rita.sensei.dev/"
 technologies:
