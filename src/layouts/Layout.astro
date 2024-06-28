@@ -14,15 +14,15 @@ const headTags = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<SeoTags {...headTags} />
 	<body
-    class="mx-auto flex min-h-screen max-w-[872px] flex-col gap-9 bg-neutral-950 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16"
+    class="mx-auto flex h-screen max-w-[1250px] flex-col gap-9 bg-neutral-950 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16"
   	>
-		<Header />
+		<!-- <Header /> -->
 		<BlurCircle position="top" color={theme.colors.blur.top} />
 		<BlurCircle position="bottom" color={theme.colors.blur.bottom} />
 		<slot />
-		<Footer />
+		<!-- <Footer /> -->
   </body>
 </html>

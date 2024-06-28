@@ -18,7 +18,7 @@ const { title, description, slug, img_logo, image, imgAlt, technologies } = Astr
 ---
 
 <a
-  class="group relative max-w-sm cursor-pointer flex flex-col gap-2 rounded-md border border-neutral-700 p-5 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-400 z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:5px_5px] "
+  class="group relative max-w-xl cursor-pointer grid grid-cols-2 gap-6 rounded-md border border-neutral-700 p-5 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-400 z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:5px_5px] "
   transition:name={`${image} image`}
   href={`/projects/${slug}`
 }
@@ -40,6 +40,8 @@ const { title, description, slug, img_logo, image, imgAlt, technologies } = Astr
     />
     ) : null}
 </div>
+<div  class="flex flex-col gap-1 items-center justify-center">
+
   <div
   class="flex w-full justify-center items-center gap-2 md:flex-row"
   >
@@ -75,4 +77,5 @@ const { title, description, slug, img_logo, image, imgAlt, technologies } = Astr
       );
     })}
   </div>
+</div>
 </a>

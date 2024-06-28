@@ -13,6 +13,7 @@ export default defineConfig({
         "akar-icons": ["*"],
         pajamas: ["*"],
         "lets-icons": ["*"],
+        mingcute: ["*"],
       },
     }),
   ],

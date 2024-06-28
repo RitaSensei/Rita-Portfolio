@@ -17,9 +17,9 @@
     overflow: hidden;
   }
   
-  .image-container img {
-    transform: scale(1.3);
-  }
+.image-container img {
+  transform: scale(1.3);
+}
   
 .email-icon-vibration {
   margin-bottom: 0.28em;

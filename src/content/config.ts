@@ -24,4 +24,26 @@ const projectsCollection = defineCollection({
   }),
 });
 
-export const collections = { projects: projectsCollection };
+const jobsCollection = defineCollection({
+  type: "data",
+  schema: z.object({
+    title: z.string(),
+    company: z.string(),
+    url: z.string(),
+    logo: z.string(),
+    startDate: z.string(),
+    endDate: z.string(),
+    city: z.string(),
+    country: z.string(),
+    roles: z.array(
+      z.object({
+        role: z.string(),
+        startDate: z.string(),
+        endDate: z.string(),
+        achievements: z.array(z.string()),
+      })
+    ),
+  }),
+});
+
+export const collections = { projects: projectsCollection, jobs: jobsCollection};

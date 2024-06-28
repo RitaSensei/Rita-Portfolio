@@ -2,38 +2,38 @@
     @apply leading-7;
   }
   
-  .project code {
-    @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-teal-500;
-  }
-  
-  .project h2 {
-    @apply mt-6 text-3xl text-teal-300;
-  }
-  
-  .project h3 {
-    @apply mt-4 text-xl text-neutral-100;
-  }
-  
-  .project code {
-    @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-teal-500;
-  }
-  
-  .project a {
-    @apply text-neutral-100  hover:text-teal-500;
-  }
-  
-  .project ul {
-    @apply list-disc;
-  }
-  
-  .project blockquote {
-    @apply flex flex-row gap-2 before:block before:h-auto before:w-1 before:max-w-[1px] before:bg-red-400 before:content-[''];
-  }
-  
-  .project pre {
-    @apply p-4;
-  }
-  
-  .project pre > code {
-    @apply bg-transparent;
-  }
+.project code {
+  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-teal-500;
+}
+
+.project h2 {
+  @apply mt-6 text-3xl text-teal-300;
+}
+
+.project h3 {
+  @apply mt-4 text-xl text-neutral-100;
+}
+
+.project code {
+  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-teal-500;
+}
+
+.project a {
+  @apply text-neutral-100  hover:text-teal-500;
+}
+
+.project ul {
+  @apply list-disc;
+}
+
+.project blockquote {
+  @apply flex flex-row gap-2 before:block before:h-auto before:w-1 before:max-w-[1px] before:bg-red-400 before:content-[''];
+}
+
+.project pre {
+  @apply p-4;
+}
+
+.project pre > code {
+  @apply bg-transparent;
+}
