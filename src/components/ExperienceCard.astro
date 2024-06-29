@@ -1,0 +1,83 @@
+---
+type Technology = {
+name: string;
+route: string;
+};
+
+type Props = {
+title: string;
+company: string;
+space: string;
+url: string;
+logo: string;
+size: string;
+city: string;
+country: string;
+startDate: Date;
+endDate: Date;
+achievements: string[];
+technologies?: Technology[];
+};
+
+const { title, company, space, url, logo, size, city, country, startDate, endDate, achievements, technologies }: Props = Astro.props;
+
+const startDateString = startDate.toLocaleString('en-US', { year: 'numeric', month: 'short' });
+const endDateString = endDate.toLocaleString('en-US', { year: 'numeric', month: 'short' });
+
+const isSameMonthAndYear = startDateString === endDateString;
+const displayDate = isSameMonthAndYear ? startDateString : `${startDateString} - ${endDateString}`;
+
+---
+
+<a
+  class="group relative max-w-fit cursor-pointer rounded-md p-5 transition-all duration-300 hover:-translate-y-2 hover:border border-neutral-400 z-10 bg-[size:5px_5px] hover:bg-[linear-gradient(to_right,#7f7f7f2e_1px,transparent_1px),linear-gradient(to_bottom,#7f7f7f2e_1px,transparent_1px)]"
+  href={`${url}`}
+>
+<div class="flex flex-row gap-3">
+    <div class="sticky w-24 items-center mt-2">
+        <img src={logo} alt={company} class=`${size} self-center`/>
+    </div>
+    <div class="flex flex-col gap-4 w-full items-start">
+        <div class="flex flex-col items-start gap-1">
+            <div class="flex flex-row items-center">
+                <p class="text-neutral-100 hover:text-teal-500 text-lg">{title} @ {company} </p>
+                <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    class=`transition-all duration-300 group-hover:translate-x-1 mb-0.5 self-end ${space}`
+                >
+                    <path
+                    d="M5.25 12.75L12.75 5.25"
+                    stroke="#14b8a5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ></path>
+                    <path
+                    d="M5.25 5.25H12.75V12.75"
+                    stroke="#14b8a5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ></path>
+                </svg> 
+            </div>  
+            <p class="text-neutral-400 text-sm">{city}, {country}</p>
+        </div>
+        <div class="flex flex-col gap-2">
+            <p class="text-neutral-400 text-sm">{displayDate}</p>
+            <ul class="list-outside list-image-[url(/marker_icon.png)] text-neutral-400 ml-4 space-y-1">
+                {achievements.map((achievement, idx) => (
+                <li value={idx}>{achievement}</li>
+                ))}
+            </ul>
+            <div class="flex flex-row flex-wrap pt-4 gap-3 justify-start">
+                {technologies?.map((tech) => (
+                <img src={tech.route} alt={tech.name} class="h-6" />
+                ))}
+            </div>
+        </div>
+    </div>
+</div>
+</a>
+  

@@ -1,0 +1,135 @@
+---
+import Link from "../components/shared/Link.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ExperienceCard from "@/components/ExperienceCard.astro";
+import presentation from "../data/presentation";
+import convertAsteriskToStrongTag from "../utils/convertAsterikToStrongTag";
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+import { RESUME_LINK } from "../data/config";
+
+const projects = (await getCollection("projects")).sort((first, second) => {
+  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
+});
+
+const jobs = (await getCollection("jobs")).sort((first, second) => {
+  return second.data.startDate.getTime() - first.data.endDate.getTime();
+});
+---
+
+<div class="flex flex-col -mt-10 -ml-10">
+    <article id="about" class="flex flex-col gap-4 pt-32">
+    {presentation.about.map((info) => (
+        <p class="text-base leading-7 text-neutral-300" set:html={convertAsteriskToStrongTag(info)} />
+    ))}
+    </article>
+
+    <article id="experience" class="flex flex-col gap-8 pt-28">
+        <section class="flex flex-col gap-8 md:flex-row md:flex-wrap">
+            {jobs.slice(0, 4).map((job) => (
+              <ExperienceCard
+                title={job.data.title}
+                company={job.data.company}
+                space={job.data.space}
+                url={job.data.url}
+                logo={job.data.logo}
+                size={job.data.size}
+                city={job.data.city}
+                country={job.data.country}
+                startDate={job.data.startDate}
+                endDate={job.data.endDate}
+                achievements={job.data.achievements}
+                technologies={job.data.technologies}
+              />
+            ))}
+          </section>
+        <a
+            href={RESUME_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-teal-500 hover:font-medium transition duration-300 ease-in-out text-white text-base py-1.5 px-2 rounded-md flex items-center",
+            >
+            View Full Resume
+            <Icon name="lets-icons:external" class="ml-1 w-4 h-4" />
+        </a>
+    </article>
+
+    <article id="projects" class="flex flex-col gap-8 pt-28">
+    <header class="flex w-full flex-row justify-between gap-2">
+        <h3 class="text-lg text-neutral-100">Projects ({projects.length})</h3>
+        <Link href="/projects" label="See all projects" isUnderline target="_self" />
+    </header>
+
+    <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
+        {projects.slice(0, 4).map((project) => (
+        <ProjectCard
+            title={project.data.title}
+            description={project.data.description}
+            img_logo={project.data.img_logo.src}
+            imgAlt={project.data.img_logo.alt}
+            image={project.data.image.src}
+            slug={project.slug}
+            technologies={project.data.technologies}
+        />
+        ))}
+    </section>
+    </article>
+    <article>
+    <footer class="flex flex-col gap-4 pt-16 items-center">
+        <p class="text-sm text-neutral-400">
+        Built by Ghita Loukili
+        </p>
+        <p class="text-sm text-neutral-400">
+        Design based on <a href="https://brittanychiang.com" target="_blank" rel="noopener noreferrer" class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer">Brittany Chiang portfolio</a>
+        </p>
+    </footer>
+    </article>
+</div>
+
+<script>
+  // JavaScript to handle intersection observer for section highlighting and smooth scrolling
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("article[id]");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        const navLink = document.querySelector(`nav ul li a[href="#${entry.target.id}"]`);
+        if(navLink) {
+          if (entry.isIntersecting) {
+            navLink.classList.add("bg-teal-500");
+          } else {
+            navLink.classList.remove("bg-teal-500");
+          }
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Smooth scroll behavior with offset
+    navLinks.forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const targetId = link?.getAttribute("href")?.substring(1) ?? "";
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          const offset = 96;
+          const targetOffset = targetSection.offsetTop - offset;
+          window.scrollTo({
+            top: targetOffset,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+  });
+</script>

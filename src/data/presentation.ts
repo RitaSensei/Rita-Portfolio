@@ -23,7 +23,7 @@ type Social = {
     about: [
       "**Software Engineering** student and passionate IT enthusiast. I am dedicated to mastering **Backend** using **Java** and **Spring Boot**, while also expanding my expertise in **Mobile Development** with **React Native**. With a keen interest in **DevOps** and **Cloud Computing**, I am eager to delve deeper into these fields and explore their potential.",
       " These days I am working on honing my skills in web development while also delving into the world of mobile development. I am always looking for new challenges and opportunities to learn and grow.",
-      "When I m not coding, I enjoy reading books, crocheting and doing embroidery. I also love reading mangas and watching anime.",
+      "When I am not coding, I enjoy reading books, crocheting and doing embroidery. I also love reading mangas and watching anime.",
     ],
     socials: [
       {

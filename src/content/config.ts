@@ -29,20 +29,19 @@ const jobsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     company: z.string(),
+    space: z.string(),
     url: z.string(),
     logo: z.string(),
-    startDate: z.string(),
-    endDate: z.string(),
+    size: z.string(),
     city: z.string(),
     country: z.string(),
-    roles: z.array(
-      z.object({
-        role: z.string(),
-        startDate: z.string(),
-        endDate: z.string(),
-        achievements: z.array(z.string()),
-      })
-    ),
+    startDate: z.date(),
+    endDate: z.date(),
+    achievements: z.array(z.string()),
+    technologies: z.array(z.object({
+      name: z.string(),
+      route: z.string(),
+    })),
   }),
 });
 
