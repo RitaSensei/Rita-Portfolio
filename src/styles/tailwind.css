@@ -37,8 +37,8 @@
   position: absolute;
   inset: 0;
   height: 100%;
-  width: 100%;
-  object-fit: cover;
+  /* width: 100%; */
+  object-fit: fill;
   display: block; 
 }
 
@@ -46,7 +46,7 @@
   position: absolute;
   inset: 0;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   object-fit: fill;
   display: none;
 }
@@ -72,7 +72,7 @@
 }
 
 .description_project {
-  text-wrap: balance;
+  text-wrap: wrap;
 }
 /* Mobile devices */
 @media (max-width: 767px) {

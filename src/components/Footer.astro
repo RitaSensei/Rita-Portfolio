@@ -1,35 +1,10 @@
----
-import Link from "../components/shared/Link.astro";
-import presentation from "../data/presentation";
----
-
-<article class="flex flex-col gap-8">
-    <header class="w-full flex justify-between items-end gap-2">
-      <h3 class="text-lg text-neutral-100 flex gap-2 items-end">
-        Get in touch
-        <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="align-bottom email-icon-vibration self-center"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="#6366F1"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-          <path d="M10 21v-6.5a3.5 3.5 0 0 0 -7 0v6.5h18v-6a4 4 0 0 0 -4 -4h-10.5" />
-          <path d="M12 11v-8h4l2 2l-2 2h-4" />
-          <path d="M6 15h1" />
-        </svg>
-      </h3>
-    </header>
-    <p>
-      <!-- Email me at <Link
-        href={`mailto:${presentation.mail}`}
-        label={presentation.mail}
-        isUnderline
-      /> -->
-    </p>
-  </article>
+<article>
+  <footer class="flex flex-col pb-6">
+      <!-- <p class="text-base text-neutral-400 font-semibold">
+      Built by Ghita Loukili
+      </p>
+      <p class="text-sm text-neutral-400">
+      Design based on <a href="https://brittanychiang.com" target="_blank" rel="noopener noreferrer" class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer">Brittany Chiang portfolio</a>
+      </p> -->
+  </footer>
+</article>

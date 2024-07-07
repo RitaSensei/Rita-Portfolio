@@ -1,7 +1,8 @@
 ---
 title: "Rita's Portfolio"
 publishedAt: 2024-06-21
-description: "Portfolio template created with Astro and TailwindCSS."
+description: "A portfolio site built with Astro and TailwindCSS. This site is a work in progress."
+
 slug: "rita-portfolio"
 image: 
   src: "/projects_images/test_portfolio.webp"

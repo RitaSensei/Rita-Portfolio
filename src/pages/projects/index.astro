@@ -2,8 +2,8 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
-const projects = (await getCollection("projects")).sort(function (first, second) {
-  return first.data.publishedAt.getTime() - second.data.publishedAt.getTime();
+const projects = (await getCollection("projects")).sort((first, second) => {
+  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
 });
 ---
 
@@ -14,11 +14,11 @@ const projects = (await getCollection("projects")).sort(function (first, second)
       {
         projects.map((project) => (
           <a
-            class="group flex flex-col gap-2 border-t border-neutral-700 py-4 transition-all hover:text-neutral-100"
+            class="group flex flex-col gap-2 border-t border-neutral-700 py-4 transition-all"
             href={`/projects/${project.slug}`}
           >
             <div class="flex w-full items-center justify-between">
-              <h2 class="text-lg text-teal-100">{project.data.title}</h2>
+              <h2 class="text-lg text-teal-100 group-hover:text-teal-500">{project.data.title}</h2>
               <div class="flex flex-row items-center gap-4">
                 <svg
                   width="18"
@@ -45,14 +45,14 @@ const projects = (await getCollection("projects")).sort(function (first, second)
             <p>{project.data.description}</p>
             <div class="flex flex-row flex-wrap pt-4 gap-2">
               {project.data.technologies && (
-      <div class="flex flex-row gap-2">
-        {project.data.technologies.map((tech) => {
-      return (
-        <img src={tech.route} alt={`${tech.name}`} title={tech.name} class="h-6"/>
-      );
-    })}
-      </div>
-      )}
+                <div class="flex flex-row gap-2">
+                  {project.data.technologies.map((tech: { route: string | null | undefined; name: string | null | undefined; }) => {
+                return (
+                  <img src={tech.route} alt={`${tech.name}`} title={tech.name} class="h-6"/>
+                );
+              })}
+                </div>
+                )}
             </div>
           </a>
         ))

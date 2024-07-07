@@ -62,7 +62,7 @@ const description = project.data.description;
 
     {project.data.technologies && (
       <div class="flex flex-row gap-2 justify-center">
-        {project.data.technologies.map((tech) => {
+        {project.data.technologies.map((tech: { route: string | null | undefined; name: string | null | undefined; }) => {
       return (
         <img src={tech.route} alt={`${tech.name}`} title={tech.name} class="h-7"/>
       );

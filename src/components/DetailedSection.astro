@@ -1,5 +1,4 @@
 ---
-import Link from "../components/shared/Link.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import ExperienceCard from "@/components/ExperienceCard.astro";
 import presentation from "../data/presentation";
@@ -55,34 +54,39 @@ const jobs = (await getCollection("jobs")).sort((first, second) => {
     </article>
 
     <article id="projects" class="flex flex-col gap-8 pt-28">
-    <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Projects ({projects.length})</h3>
-        <Link href="/projects" label="See all projects" isUnderline target="_self" />
-    </header>
-
-    <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
-        {projects.slice(0, 4).map((project) => (
-        <ProjectCard
-            title={project.data.title}
-            description={project.data.description}
-            img_logo={project.data.img_logo.src}
-            imgAlt={project.data.img_logo.alt}
-            image={project.data.image.src}
-            slug={project.slug}
-            technologies={project.data.technologies}
-        />
-        ))}
-    </section>
+      <section class="flex flex-col gap-8 md:flex-row md:flex-wrap">
+          {projects.slice(0, 4).map((project) => (
+          <ProjectCard
+              title={project.data.title}
+              description={project.data.description}
+              img_logo={project.data.img_logo.src}
+              imgAlt={project.data.img_logo.alt}
+              image={project.data.image.src}
+              slug={project.slug}
+              technologies={project.data.technologies}
+          />
+          ))}
+      </section>
+      <a
+        href="/projects"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-teal-500 hover:font-medium transition duration-300 ease-in-out text-white text-base py-1.5 px-2 rounded-md flex items-center",
+        >
+        View All Projects
+        <Icon name="lets-icons:external" class="ml-1 w-4 h-4" />
+        </a>
     </article>
+
     <article>
-    <footer class="flex flex-col gap-4 pt-16 items-center">
-        <p class="text-sm text-neutral-400">
-        Built by Ghita Loukili
-        </p>
-        <p class="text-sm text-neutral-400">
-        Design based on <a href="https://brittanychiang.com" target="_blank" rel="noopener noreferrer" class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer">Brittany Chiang portfolio</a>
-        </p>
-    </footer>
+      <footer class="flex flex-col gap-2 mt-24 -mb-16 items-center">
+          <p class="text-base text-neutral-400 font-semibold">
+          Built by Ghita Loukili
+          </p>
+          <p class="text-sm text-neutral-400">
+          Design based on <a href="https://brittanychiang.com" target="_blank" rel="noopener noreferrer" class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer">Brittany Chiang portfolio</a>
+          </p>
+      </footer>
     </article>
 </div>
 
