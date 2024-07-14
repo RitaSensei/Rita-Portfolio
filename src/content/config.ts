@@ -25,7 +25,7 @@ const projectsCollection = defineCollection({
 });
 
 const jobsCollection = defineCollection({
-  type: "data",
+  type: "content",
   schema: z.object({
     title: z.string(),
     company: z.string(),
