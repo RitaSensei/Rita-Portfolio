@@ -10,7 +10,7 @@ country: "Morocco"
 startDate: 2024-07-01
 endDate: 2024-08-15
 achievements:
-  - "Automating end-to-end tests and regression tests using cypress and cucumber within the context of a monitoring project."
+  - "Automating end-to-end tests and non-regression tests using cypress and cucumber within the context of a monitoring project."
   - "To fill later"
   - "To fill later"
 technologies:

@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+.swap-on {
+  display: none;
+}
+
+input:checked ~ .swap-on {
+  display: block;
+}
+
+input:checked ~ .swap-off {
+  display: none;
+}
+
+.swap-off {
+  display: block;
+}
+
+input:not(:checked) ~ .swap-off {
+  display: block;
+}
+
+input:not(:checked) ~ .swap-on {
+  display: none;
+}
+
 .salute-animation {
     transform-origin: bottom center;
 }
