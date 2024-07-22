@@ -4,8 +4,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://RitaSensei.github.io",
-  base: "/Rita-Portfolio",
   integrations: [
     tailwind(),
     icon({
