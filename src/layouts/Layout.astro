@@ -1,7 +1,7 @@
 ---
-import BlurCircle from '../components/shared/BlurCircle.astro';
-import SeoTags from '../components/SeoTags.astro';
-import type { HeadTags } from '../utils/types/HeadTags';
+import BlurCircle from "../components/shared/BlurCircle.astro";
+import SeoTags from "../components/SeoTags.astro";
+import type { HeadTags } from "../utils/types/HeadTags";
 import theme from "../data/theme";
 import "../styles/project.css";
 import "../styles/tailwind.css";
@@ -11,15 +11,17 @@ export type Props = HeadTags;
 const headTags = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <SeoTags {...headTags} />
-</head>
-<body class="mx-auto flex h-screen max-w-[1250px] flex-col gap-9 bg-zinc-950 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16 bg-app">
-  <BlurCircle position="top" color={theme.colors.blur.top} />
-  <BlurCircle position="bottom" color={theme.colors.blur.bottom} />
-  <slot />
-  <footer class="flex flex-col pb-1" />
-</body>
+  <head>
+    <SeoTags {...headTags} />
+  </head>
+  <body
+    class="mx-auto flex h-screen max-w-[1250px] flex-col gap-9 bg-zinc-950 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16 bg-app"
+  >
+    <BlurCircle position="top" color={theme.colors.blur.top} />
+    <BlurCircle position="bottom" color={theme.colors.blur.bottom} />
+    <slot />
+    <footer class="flex flex-col pb-1"></footer>
+  </body>
 </html>

@@ -15,7 +15,6 @@ export async function getStaticPaths() {
 
 type Props = {
   project: CollectionEntry<"projects">;
-  
 };
 
 const { project } = Astro.props;
@@ -23,52 +22,72 @@ const { Content } = await project.render();
 export const prerender = true;
 const fulltitle = "Ghita.L - " + project.data.title;
 const description = project.data.description;
-
 ---
 
-<Layout title={fulltitle}, description={description}>
+<Layout title={fulltitle} , description={description}>
   <main class="project mx-auto flex w-9/12 flex-col gap-4">
-    <div role="list" class="flex flex-row gap-2 justify-center" >
-      {project.data.github && (
-        <a
-          href={project.data.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: 'none' }}
-          class="text-teal-100 hover:text-teal-500 cursor-pointer">
-          <Icon name="iconoir:github" size={26} />
-        </a>
-      )}
+    <div role="list" class="flex flex-row gap-2 justify-center">
+      {
+        project.data.github && (
+          <a
+            href={project.data.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            class="text-teal-100 hover:text-teal-500 cursor-pointer"
+          >
+            <Icon name="iconoir:github" size={26} />
+          </a>
+        )
+      }
       {project.data.github && project.data.website && <> / </>}
-      {project.data.website && (
-        <a
-         href={project.data.website}
-         target="_blank"
-         rel="noopener noreferrer"
-         style={{ textDecoration: 'none' }}
-         class="text-teal-100 hover:text-teal-500 cursor-pointer ">
-          <Icon name="iconoir:www" size={26} />
-        </a>
-      )}
+      {
+        project.data.website && (
+          <a
+            href={project.data.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+            class="text-teal-100 hover:text-teal-500 cursor-pointer "
+          >
+            <Icon name="iconoir:www" size={26} />
+          </a>
+        )
+      }
     </div>
 
-    {project.data.image && project.data.image.src && (
-      <img src={project.data.image.src}
-      class="h-auto w-full md:w-4/4 object-cover rounded-lg mx-auto"
-      alt={project.data.image.alt}
-      transition:name={`${project.data.image.src} image`}
-      />
-    )}
+    {
+      project.data.image && project.data.image.src && (
+        <img
+          src={project.data.image.src}
+          class="h-auto w-full md:w-4/4 object-cover rounded-lg mx-auto"
+          alt={project.data.image.alt}
+          transition:name={`${project.data.image.src} image`}
+        />
+      )
+    }
 
-    {project.data.technologies && (
-      <div class="flex flex-row gap-2 justify-center">
-        {project.data.technologies.map((tech: { route: string | null | undefined; name: string | null | undefined; }) => {
-      return (
-        <img src={tech.route} alt={`${tech.name}`} title={tech.name} class="h-7"/>
-      );
-    })}
-      </div>
-    )}
+    {
+      project.data.technologies && (
+        <div class="flex flex-row gap-2 justify-center">
+          {project.data.technologies.map(
+            (tech: {
+              route: string | null | undefined;
+              name: string | null | undefined;
+            }) => {
+              return (
+                <img
+                  src={tech.route}
+                  alt={`${tech.name}`}
+                  title={tech.name}
+                  class="h-7"
+                />
+              );
+            },
+          )}
+        </div>
+      )
+    }
     <Content />
   </main>
 </Layout>

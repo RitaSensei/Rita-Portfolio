@@ -1,5 +1,12 @@
 {
     "files.associations": {
       "*.css": "tailwindcss"
-    }
+    },
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "astro",
+      "typescript",
+      "typescriptreact"
+    ]
   }

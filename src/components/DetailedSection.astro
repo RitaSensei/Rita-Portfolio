@@ -17,46 +17,58 @@ const jobs = (await getCollection("jobs")).sort((first, second) => {
 ---
 
 <div class="flex flex-col -mt-20 -ml-10">
-    <article id="about" class="flex flex-col gap-4 pt-32">
-    {presentation.about.map((info) => (
-        <p class="text-base leading-7 text-neutral-300" set:html={convertAsteriskToStrongTag(info)} />
-    ))}
-    </article>
+  <article id="about" class="flex flex-col gap-4 pt-32">
+    {
+      presentation.about.map((info) => (
+        <p
+          class="text-base leading-7 text-neutral-300"
+          set:html={convertAsteriskToStrongTag(info)}
+        />
+      ))
+    }
+  </article>
 
-    <article id="experience" class="flex flex-col gap-8 pt-28">
-        <section class="flex flex-col gap-8 md:flex-row md:flex-wrap">
-            {jobs.slice(0, 4).map((job) => (
-              <ExperienceCard
-                title={job.data.title}
-                company={job.data.company}
-                space={job.data.space}
-                url={job.data.url}
-                logo={job.data.logo}
-                size={job.data.size}
-                city={job.data.city}
-                country={job.data.country}
-                startDate={job.data.startDate}
-                endDate={job.data.endDate}
-                achievements={job.data.achievements}
-                technologies={job.data.technologies}
-              />
-            ))}
-          </section>
-        <a
-            href={RESUME_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:text-teal-500 hover:font-medium transition duration-300 ease-in-out text-white text-base py-1.5 px-2 rounded-md flex items-center",
-            >
-            View Full Resume
-            <Icon name="lets-icons:external" class="ml-1 w-4 h-4" />
-        </a>
-    </article>
+  <article id="experience" class="flex flex-col gap-8 pt-28">
+    <section class="flex flex-col gap-8 md:flex-row md:flex-wrap">
+      {
+        jobs
+          .slice(0, 4)
+          .map((job) => (
+            <ExperienceCard
+              title={job.data.title}
+              company={job.data.company}
+              space={job.data.space}
+              url={job.data.url}
+              logo={job.data.logo}
+              size={job.data.size}
+              city={job.data.city}
+              country={job.data.country}
+              startDate={job.data.startDate}
+              endDate={job.data.endDate}
+              achievements={job.data.achievements}
+              technologies={job.data.technologies}
+            />
+          ))
+      }
+    </section>
+    <a
+      href={RESUME_LINK}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:text-teal-500 hover:font-medium transition duration-300 ease-in-out text-white text-base py-1.5 px-2 rounded-md flex items-center"
+    >
+      View Full Resume
+      <Icon name="lets-icons:external" class="ml-1 w-4 h-4" />
+    </a>
+  </article>
 
-    <article id="projects" class="flex flex-col gap-8 pt-28">
-      <section class="flex flex-col gap-8 md:flex-row md:flex-wrap">
-          {projects.slice(0, 4).map((project) => (
-          <ProjectCard
+  <article id="projects" class="flex flex-col gap-8 pt-28">
+    <section class="flex flex-col gap-8 md:flex-row md:flex-wrap">
+      {
+        projects
+          .slice(0, 4)
+          .map((project) => (
+            <ProjectCard
               title={project.data.title}
               description={project.data.description}
               img_logo={project.data.img_logo.src}
@@ -64,30 +76,37 @@ const jobs = (await getCollection("jobs")).sort((first, second) => {
               image={project.data.image.src}
               slug={project.slug}
               technologies={project.data.technologies}
-          />
-          ))}
-      </section>
-      <a
-        href="/projects"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="hover:text-teal-500 hover:font-medium transition duration-300 ease-in-out text-white text-base py-1.5 px-2 rounded-md flex items-center",
-        >
-        View All Projects
-        <Icon name="lets-icons:external" class="ml-1 w-4 h-4" />
-        </a>
-    </article>
+            />
+          ))
+      }
+    </section>
+    <a
+      href="/projects"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:text-teal-500 hover:font-medium transition duration-300 ease-in-out text-white text-base py-1.5 px-2 rounded-md flex items-center"
+    >
+      View All Projects
+      <Icon name="lets-icons:external" class="ml-1 w-4 h-4" />
+    </a>
+  </article>
 
-    <article>
-      <footer class="flex flex-col gap-2 mt-24 -mb-16 items-center">
-          <p class="text-base text-neutral-400 font-semibold">
-          Built by Ghita Loukili
-          </p>
-          <p class="text-sm text-neutral-400">
-          Design based on <a href="https://brittanychiang.com" target="_blank" rel="noopener noreferrer" class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer">Brittany Chiang portfolio</a>
-          </p>
-      </footer>
-    </article>
+  <article>
+    <footer class="flex flex-col gap-2 mt-24 -mb-16 items-center">
+      <p class="text-base text-neutral-400 font-semibold">
+        Built by Ghita Loukili
+      </p>
+      <p class="text-sm text-neutral-400">
+        Design based on <a
+          href="https://brittanychiang.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer"
+          >Brittany Chiang portfolio</a
+        >
+      </p>
+    </footer>
+  </article>
 </div>
 
 <script>
@@ -103,9 +122,11 @@ const jobs = (await getCollection("jobs")).sort((first, second) => {
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        const navLink = document.querySelector(`nav ul li a[href="#${entry.target.id}"]`);
-        if(navLink) {
+      entries.forEach((entry) => {
+        const navLink = document.querySelector(
+          `nav ul li a[href="#${entry.target.id}"]`,
+        );
+        if (navLink) {
           if (entry.isIntersecting) {
             navLink.classList.add("bg-teal-500");
           } else {
@@ -115,13 +136,13 @@ const jobs = (await getCollection("jobs")).sort((first, second) => {
       });
     }, observerOptions);
 
-    sections.forEach(section => {
+    sections.forEach((section) => {
       observer.observe(section);
     });
 
     // Smooth scroll behavior with offset
-    navLinks.forEach(link => {
-      link.addEventListener("click", e => {
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
         e.preventDefault();
         const targetId = link?.getAttribute("href")?.substring(1) ?? "";
         const targetSection = document.getElementById(targetId);
@@ -130,7 +151,7 @@ const jobs = (await getCollection("jobs")).sort((first, second) => {
           const targetOffset = targetSection.offsetTop - offset;
           window.scrollTo({
             top: targetOffset,
-            behavior: "smooth"
+            behavior: "smooth",
           });
         }
       });

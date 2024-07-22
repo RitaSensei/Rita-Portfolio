@@ -11,68 +11,71 @@ type Props = {
   imgAlt: string;
   technologies: Technology[];
   image: string;
-
 };
 
-const { title, description, slug, img_logo, image, imgAlt, technologies } = Astro.props;
+const { title, description, slug, img_logo, image, imgAlt, technologies } =
+  Astro.props;
 ---
 
 <a
   class="group relative max-w-2xl cursor-pointer grid grid-cols-2 rounded-md p-5 transition-all duration-300 hover:-translate-y-2 hover:border border-neutral-400 z-10 bg-[size:5px_5px] hover:bg-[linear-gradient(to_right,#7f7f7f2e_1px,transparent_1px),linear-gradient(to_bottom,#7f7f7f2e_1px,transparent_1px)]"
   transition:name={`${image} image`}
-  href={`/projects/${slug}`
-}
+  href={`/projects/${slug}`}
 >
   <div class="relative h-24 w-40 overflow-hidden rounded-md">
-    {img_logo ? (
-      <img
-        src={img_logo}
-        alt={imgAlt}
-        class="image-logo w-full"
+    {
+      img_logo ? (
+        <img src={img_logo} alt={imgAlt} class="image-logo w-full" />
+      ) : null
+    }
+
+    {
+      image ? (
+        <img
+          src={image}
+          alt={imgAlt}
+          class={`image-main ${img_logo ? "with-logo" : ""} w-full`}
         />
-        ) : null}
-    
-    {image ? (
-      <img
-      src={image}
-      alt={imgAlt}
-      class={`image-main ${img_logo ? 'with-logo' : ''} w-full`}
-      />
-      ) : null}
+      ) : null
+    }
   </div>
-  <div  class="flex flex-col gap-2 items-start -ml-24">
-    <div class="flex flex-row w-full items-center gap-1 md:flex-row" >
-        <p class="text-neutral-100 text-xl font-medium self-start group-hover:text-teal-500">{title}</p>
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 18 18"
-            fill="none"
-            class="transition-all duration-300 group-hover:translate-x-1 self-end"
-            >
-              <path
-              d="M5.25 12.75L12.75 5.25"
-              class="group-hover:stroke-teal-500"
-              stroke="#fff"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-              <path
-              d="M5.25 5.25H12.75V12.75"
-              class="group-hover:stroke-teal-500"
-              stroke="#fff"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </svg>
+  <div class="flex flex-col gap-2 items-start -ml-24">
+    <div class="flex flex-row w-full items-center gap-1 md:flex-row">
+      <p
+        class="text-neutral-100 text-xl font-medium self-start group-hover:text-teal-500"
+      >
+        {title}
+      </p>
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 18 18"
+        fill="none"
+        class="transition-all duration-300 group-hover:translate-x-1 self-end"
+      >
+        <path
+          d="M5.25 12.75L12.75 5.25"
+          class="group-hover:stroke-teal-500"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M5.25 5.25H12.75V12.75"
+          class="group-hover:stroke-teal-500"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
     </div>
     <p class="description_project flex-wrap">
       {description}
     </p>
     <div class="flex flex-row flex-wrap pt-4 gap-2 justify-start">
-      {technologies.map((tech) => {
-        return (
-          <img src={tech.route} alt={tech.name} class="h-5"/>
-        );
-      })}
+      {
+        technologies.map((tech) => {
+          return <img src={tech.route} alt={tech.name} class="h-5" />;
+        })
+      }
     </div>
   </div>
 </a>

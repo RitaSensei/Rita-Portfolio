@@ -17,10 +17,12 @@ const projectsCollection = defineCollection({
     }),
     github: z.string(),
     website: z.string().optional(),
-    technologies: z.array(z.object({
-      name: z.string(),
-      route: z.string(),
-    })),
+    technologies: z.array(
+      z.object({
+        name: z.string(),
+        route: z.string(),
+      }),
+    ),
   }),
 });
 
@@ -38,11 +40,16 @@ const jobsCollection = defineCollection({
     startDate: z.date(),
     endDate: z.date(),
     achievements: z.array(z.string()),
-    technologies: z.array(z.object({
-      name: z.string(),
-      route: z.string(),
-    })),
+    technologies: z.array(
+      z.object({
+        name: z.string(),
+        route: z.string(),
+      }),
+    ),
   }),
 });
 
-export const collections = { projects: projectsCollection, jobs: jobsCollection};
+export const collections = {
+  projects: projectsCollection,
+  jobs: jobsCollection,
+};
