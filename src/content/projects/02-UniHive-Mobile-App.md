@@ -4,25 +4,25 @@ publishedAt: 2024-05-21
 description: "Mobile application for managing club events. It facilitates the creation, promotion, and coordination of club events, making it easy for students to discover the activities offered by various clubs."
 slug: "UniHive-Mobile"
 image:
-  src: "/Rita-Portfolio/projects_images/unihive_mobile_screen.webp"
+  src: "/projects_images/unihive_mobile_screen.webp"
   alt: "UniHive-Mobile-Screen"
 img_logo:
-  src: "/Rita-Portfolio/projects_images/unihive_logo.webp"
+  src: "/projects_images/unihive_logo.webp"
   alt: "UniHive-Logo"
 github: "https://github.com/RitaSensei/UniHive-Mobile-App"
 technologies:
   - name: "Java"
-    route: "/Rita-Portfolio/tech_logos/java.svg"
+    route: "/tech_logos/java.svg"
   - name: "Android"
-    route: "/Rita-Portfolio/tech_logos/android.svg"
+    route: "/tech_logos/android.svg"
   - name: "Spring Boot"
-    route: "/Rita-Portfolio/tech_logos/spring_boot.svg"
+    route: "/tech_logos/spring_boot.svg"
   - name: "Supabase"
-    route: "/Rita-Portfolio/tech_logos/supabase.svg"
+    route: "/tech_logos/supabase.svg"
   - name: "Figma"
-    route: "/Rita-Portfolio/tech_logos/figma.svg"
+    route: "/tech_logos/figma.svg"
   - name: "Google Cloud Platform"
-    route: "/Rita-Portfolio/tech_logos/google_cloud.svg"
+    route: "/tech_logos/google_cloud.svg"
 ---
 
 ## Unihive Mobile App

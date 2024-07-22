@@ -5,26 +5,26 @@ description: "A portfolio site built with Astro and TailwindCSS. This site is a 
 
 slug: "rita-portfolio"
 image:
-  src: "/Rita-Portfolio/projects_images/test_portfolio.webp"
+  src: "/projects_images/test_portfolio.webp"
   alt: "rita-portfolio"
 img_logo:
-  src: "/Rita-Portfolio/projects_images/rita_portfolio_logo.webp"
+  src: "/projects_images/rita_portfolio_logo.webp"
   alt: "rita-portfolio-logo"
-github: "https://github.com/RitaSensei/Rita-Portfolio"
+github: "https://github.com/RitaSensei"
 website: "https://rita.sensei.dev/"
 technologies:
   - name: "Astro"
-    route: "/Rita-Portfolio/tech_logos/astro.svg"
+    route: "/tech_logos/astro.svg"
   - name: "JavaScript"
-    route: "/Rita-Portfolio/tech_logos/javascript.svg"
+    route: "/tech_logos/javascript.svg"
   - name: "TypeScript"
-    route: "/Rita-Portfolio/tech_logos/typescript.svg"
+    route: "/tech_logos/typescript.svg"
   - name: "CSS"
-    route: "/Rita-Portfolio/tech_logos/css.svg"
+    route: "/tech_logos/css.svg"
   - name: "TailwindCSS"
-    route: "/Rita-Portfolio/tech_logos/tailwindcss.svg"
+    route: "/tech_logos/tailwindcss.svg"
   - name: "Vercel"
-    route: "/Rita-Portfolio/tech_logos/vercel.svg"
+    route: "/tech_logos/vercel.svg"
 ---
 
 ## Rita's Portfolio
@@ -52,6 +52,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
 <div style="display: flex; justify-content: center; padding-top: 40px">
-  <img src="https://img.shields.io/github/stars/RitaSensei/Rita-Portfolio" alt="GitHub Stars" style="margin-right: 10px;"/>
-  <img src="https://img.shields.io/github/last-commit/RitaSensei/Rita-Portfolio" alt="GitHub Last Commit" />
+  <img src="https://img.shields.io/github/stars/RitaSensei" alt="GitHub Stars" style="margin-right: 10px;"/>
+  <img src="https://img.shields.io/github/last-commit/RitaSensei" alt="GitHub Last Commit" />
 </div>

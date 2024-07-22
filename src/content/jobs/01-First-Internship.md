@@ -13,11 +13,11 @@ achievements:
   - "Developed a login page for a digital content management application."
 technologies:
   - name: "Typescript"
-    route: "/Rita-Portfolio/tech_logos/typescript.svg"
+    route: "/tech_logos/typescript.svg"
   - name: "Java"
-    route: "/Rita-Portfolio/tech_logos/java.svg"
+    route: "/tech_logos/java.svg"
   - name: "Angular"
-    route: "/Rita-Portfolio/tech_logos/angular.svg"
+    route: "/tech_logos/angular.svg"
   - name: "Spring Boot"
-    route: "/Rita-Portfolio/tech_logos/spring_boot.svg"
+    route: "/tech_logos/spring_boot.svg"
 ---

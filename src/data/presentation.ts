@@ -18,7 +18,7 @@ const presentation: Presentation = {
   mail: "ghita28loukili@gmail.com",
   title: "*Hi*, I’m Ghita Loukili ",
   role: "*S*oftware *E*ngineering Student",
-  profile: "/Rita-Portfolio/profile.png",
+  profile: "/profile.png",
   description:
     "Improving daily work is even more important than doing daily work.",
   about: [
