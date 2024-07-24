@@ -5,13 +5,13 @@ description: "A portfolio site built with Astro and TailwindCSS. This site is a 
 
 slug: "rita-portfolio"
 image:
-  src: "/projects_images/test_portfolio.webp"
+  src: "/projects_images/rita_portfolio_page.webp"
   alt: "rita-portfolio"
 img_logo:
   src: "/projects_images/rita_portfolio_logo.webp"
   alt: "rita-portfolio-logo"
-github: "https://github.com/RitaSensei"
-website: "https://rita.sensei.dev/"
+github: "https://github.com/RitaSensei/Rita-Portfolio"
+website: "https://rita-portfolio.vercel.app/"
 technologies:
   - name: "Astro"
     route: "/tech_logos/astro.svg"
@@ -52,6 +52,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
 <div style="display: flex; justify-content: center; padding-top: 40px">
-  <img src="https://img.shields.io/github/stars/RitaSensei" alt="GitHub Stars" style="margin-right: 10px;"/>
-  <img src="https://img.shields.io/github/last-commit/RitaSensei" alt="GitHub Last Commit" />
+  <img src="https://img.shields.io/github/stars/RitaSensei/Rita-Portfolio" alt="GitHub Stars" style="margin-right: 10px;"/>
+  <img src="https://img.shields.io/github/last-commit/RitaSensei/Rita-Portfolio" alt="GitHub Last Commit" />
 </div>

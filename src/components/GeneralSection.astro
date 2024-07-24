@@ -9,7 +9,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
 ---
 
 <article
-  class="flex flex-col gap-64 md:row-span-2 sticky self-start top-28 h-96"
+  class="flex flex-col md:gap-64 md:row-span-2 md:sticky self-start top-28 md:h-96 mt-6"
 >
   <div class="flex flex-col gap-6 flex-grow">
     <h1 class="text-4xl font-semibold text-neutral-100">
@@ -54,7 +54,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
         <Icon name="mingcute:quote-right-fill" class="text-teal-500 size-3" />
       </div>
     </blockquote>
-    <nav role="navigation">
+    <nav role="navigation" class="hidden md:block">
       <ul role="list" class="flex flex-col gap-2 items-start">
         <li>
           <a
@@ -86,7 +86,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
       </ul>
     </nav>
   </div>
-  <div class="mt-auto ml-20">
+  <div class="md:mt-auto md:ml-20 mt-10">
     <SocialLinks />
   </div>
 </article>
