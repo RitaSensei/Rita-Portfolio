@@ -107,8 +107,10 @@ input:not(:checked) ~ .swap-on {
 .sticky-title {
   position: sticky;
   top: 0;
-  background: rgba(9, 9, 11, 0.43);
+  background: transparent;
   z-index: 20;
-  padding: 8px 0;
+  padding: 8px 20px;
+  margin-left: -21px;
+  margin-right: -21px;
   backdrop-filter: blur(10px);
 }
