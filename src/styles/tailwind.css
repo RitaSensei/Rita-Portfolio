@@ -104,3 +104,11 @@ input:not(:checked) ~ .swap-on {
     --view-transition-name: none;
   }
 }
+.sticky-title {
+  position: sticky;
+  top: 0;
+  background: rgba(9, 9, 11, 0.43);
+  z-index: 20;
+  padding: 8px 0;
+  backdrop-filter: blur(10px);
+}

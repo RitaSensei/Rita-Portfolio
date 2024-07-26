@@ -1,7 +1,7 @@
 ---
 title: "Software Engineer Intern"
 company: "Morocco Nearshore Services"
-space: "relative right-96"
+space: "relative right-88"
 url: "https://morocconearshoreservices.com"
 logo: "/jobs_logos/mns_logo.webp"
 size: "w-24"
