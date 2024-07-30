@@ -10,7 +10,8 @@ country: "Morocco"
 startDate: 2023-08-01
 endDate: 2023-08-31
 achievements:
-  - "Developed a login page for a digital content management application."
+  - "Contributed to the development of a digital content management application by implementing a secure and user-friendly login page."
+  - "Ensured robust authentication and seamless user experience. "
 technologies:
   - name: "Typescript"
     route: "/tech_logos/typescript.svg"

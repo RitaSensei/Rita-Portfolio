@@ -22,10 +22,10 @@ const presentation: Presentation = {
   description:
     "***❝*** Improving daily work is even more important than doing daily work. ***❞***",
   about: [
-    "**Software Engineering** student and passionate IT enthusiast. I am dedicated to mastering **Backend** using **Java** and **Spring Boot**, while also expanding my expertise in **Mobile Development** with **React Native**. With a keen interest in **DevOps** and **Cloud Computing**, I am eager to delve deeper into these fields and explore their potential.",
-    " These days I am working on honing my skills in web development while also delving into the world of mobile development. I am always looking for new challenges and opportunities to learn and grow.",
-    "When I am not coding, I enjoy reading books, crocheting and doing embroidery. I also love reading mangas and watching anime.",
-    "I still don't know exactly what i want to do in my career but I am trying to figure it out.",
+    "I am a **SWE Student** passionate about a lot of thing in IT, mainly interested in **backend** and **mobile development**. I am dedicated to mastering backend development with **Java** and **Spring Boot**, while also expanding my expertise in mobile development with **React Native**. I am also discovering more about **DevOps** and **Cloud Computing** and am eager to explore their potential.",
+    "I am currently honing my skills in web and mobile development, while learning about software testing during my summer internship",
+    "When I am not coding, I enjoy reading books, crocheting and embroidery. These activities provide a calming break from coding.",
+    "While I am still figuring out my career path, I am committed to exploring various avenues to build my career.",
   ],
   socials: [
     {
