@@ -17,7 +17,7 @@ type Presentation = {
 const presentation: Presentation = {
   mail: "ghita28loukili@gmail.com",
   title: "*Hi*, I’m Ghita Loukili ",
-  role: "*S*oftware *E*ngineering Student",
+  role: "*S*oftware *E*ngineering *S*tudent",
   profile: "/profile.png",
   description:
     "***❝*** Improving daily work is even more important than doing daily work. ***❞***",

@@ -106,3 +106,21 @@ input:not(:checked) ~ .swap-on {
   margin-right: -21px;
   backdrop-filter: blur(10px);
 }
+
+/* spotlight.css */
+.spotlight {
+  position: fixed;
+  pointer-events: none;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient( rgba(255,255,255, 0.07) 20%, rgba(255,255,255, 0.06) 40%, rgba(255,255,255, 0.048) 65%, rgba(255,255,255, 0.04) 100%);
+  box-shadow: 0 0 170px 180px rgba(255,255,255, 0.045);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+body.spotlight-enabled .spotlight {
+  opacity: 1;
+}
