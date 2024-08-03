@@ -26,15 +26,15 @@ const description = project.data.description;
 
 <Layout title={fulltitle} , description={description}>
   <div class="flex flex-col items-start -mt-6">
-    <a href="/" class="sticky -ml-24">
+    <a id="header" href="/" onclick="navigateTo(event, '/')" class="pt-4">
       <img
             src="/site_icon.png"
-            class=" h-12 w-fit rounded-lg items-start"
+            class=" h-14 w-14 rounded-lg items-start"
             alt="Ghita's Portfolio"
             transition:name="site icon image"
           />
     </a>
-    <main class="project mx-auto flex md:w-10/12 w-11/12 flex-col gap-4">
+    <main class="project mx-auto flex md:w-10/12 w-11/12 flex-col gap-4 pt-12">
       <div role="list" class="flex flex-row gap-2 justify-center">
         {
           project.data.github && (

@@ -9,15 +9,15 @@ const projects = (await getCollection("projects")).sort((first, second) => {
 
 <Layout title="Ghita.L - All Projects">
   <div class="flex flex-col items-start -mt-6">
-    <a href="/" onclick="navigateTo(event, '/')" class="sticky -ml-24 pb-10">
+    <a id="header" href="/" onclick="navigateTo(event, '/')" class="pt-4">
       <img
             src="/site_icon.png"
-            class=" h-12 w-fit rounded-lg items-start"
+            class=" h-14 w-14 rounded-lg items-start"
             alt="Ghita's Portfolio"
             transition:name="site icon image"
           />
     </a>
-    <main class="flex flex-col gap-12" transition:animate="slide">
+    <main class="flex flex-col gap-12 pt-10" transition:animate="slide">
       <h1 class="text-4xl text-neutral-100 text-center">All Projects</h1>
       <article class="flex flex-col gap-4">
         {
