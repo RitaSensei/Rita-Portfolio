@@ -35,8 +35,10 @@ NB: Additional color themes can also be configured on the `src/data/theme.ts` fi
 
 ## Usage
 
-- You can modify all the information in the files in the `data` folder (presentation, social links, projects list, colors).
-- You can write articles in `markdown` format in the `content/projects` folder.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>You can modify all the information in the files in the <code>data</code> folder (presentation, social links, projects list, colors).</li>
+  <li>You can write articles in <code>markdown</code> format in the <code>content/projects</code> folder.</li>
+</ul>
 
 ## Commands
 

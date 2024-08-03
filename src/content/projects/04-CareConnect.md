@@ -32,35 +32,42 @@ CareConnect is a mobile application developed using React Native and Expo. It se
 
 ### 1. **User Authentication and Management**
 
-- **Account Creation and Login**: Parents and nannies can create accounts and log in using their email and password.
-- **Profile Personalization**: Nannies can personalize their profiles to showcase their skills and experiences.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li><strong>Account Creation and Login :</strong> Parents and nannies can create accounts and log in using their email and password.</li>
+  <li><strong>Profile Personalization :</strong> Nannies can personalize their profiles to showcase their skills and experiences.</li>
+</ul>
 
 ### 2. **Parent Features**
 
-- **Browse Nanny Profiles**: Parents can access profiles of available nannies.
-- **Request Nannies via Chatbot (NannyPal)**: Parents can specify their criteria and preferences for nannies through the chatbot.
-- **Match List**: Display nannies that match the parent's criteria.
-- **Nanny Suggestions**: Personalized recommendations based on the parent's preferences.
-- **View Introductory Videos**: Parents can watch introductory videos of nannies.
-- **Notify Selected Nannies**: Parents can choose which nannies to notify.
-- **Recommendation Letters**: Parents can fill out and provide recommendation letters after the contract period.
-- **Job Offers**: Parents can propose job offers to nannies.
-- **Contract Establishment**: Formalize the contract with the selected nanny.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li><strong>Browse Nanny Profiles :</strong> Parents can access profiles of available nannies.</li>
+  <li><strong>Request Nannies via Chatbot (NannyPal) :</strong> Parents can specify their criteria and preferences for nannies through the chatbot.</li>
+  <li><strong>Match List :</strong> Display nannies that match the parent's criteria.</li>
+  <li><strong>View Introductory Videos :</strong> Parents can watch introductory videos of nannies.</li>
+  <li><strong>Notify Selected Nannies :</strong> Parents can choose which nannies to notify.</li>
+  <li><strong>Recommendation Letters :</strong> Parents can fill out and provide recommendation letters after the contract period.</li>
+  <li><strong>Job Offers :</strong> Parents can propose job offers to nannies.</li>
+  <li><strong>Contract Establishment :</strong> Formalize the contract with the selected nanny.</li>
+</ul>
 
 ### 3. **Nanny Features**
 
-- **View Notifications**: Nannies can access notifications of requests sent by parents.
-- **Accept or Reject Requests**: Nannies can respond to initial contact requests from parents.
-- **Receive Job Offers**: Nannies can receive job offers from parents.
-- **Rate Parents**: Nannies can evaluate parents during the employment period.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li><strong>View Notifications :</strong> Nannies can access notifications of requests sent by parents.</li>
+  <li><strong>Accept or Reject Requests :</strong> Nannies can respond to initial contact requests from parents.</li>
+  <li><strong>Receive Job Offers :</strong> Nannies can receive job offers from parents.</li>
+  <li><strong>Rate Parents :</strong> Nannies can evaluate parents during the employment period.</li>
+</ul>
 
 ## Next Features:
 
-- **Multilingual Chatbot**: Integrate multiple languages into the chatbot for wider accessibility.
-- **Recommendation System**: Implement a recommendation system for nanny profiles to benefit parents.
-- **Voice Recognition**: Add voice recognition capabilities to allow users to interact with the chatbot using voice commands.
-- **Collaboration with Childcare Organizations**: Collaborate with childcare organizations or agencies to broaden the app's reach and attract a larger audience.
-- **Web Version**: Develop a web version of the application to increase accessibility across different devices.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li><strong>Multilingual Chatbot :</strong> Integrate multiple languages into the chatbot for wider accessibility.</li>
+  <li><strong>Recommendation System :</strong> Implement a recommendation system for nanny profiles to benefit parents.</li>
+  <li><strong>Voice Recognition :</strong> Add voice recognition capabilities to allow users to interact with the chatbot using voice commands.</li>
+  <li><strong>Collaboration with Childcare Organizations :</strong> Collaborate with childcare organizations or agencies to broaden the app's reach and attract a larger audience.</li>
+  <li><strong>Web Version :</strong> Develop a web version of the application to increase accessibility across different devices.</li>
+</ul>
 
 <div style="display: flex; justify-content: center; padding-top: 40px">
   <img src="https://img.shields.io/github/stars/RitaSensei/CareConnect" alt="GitHub Stars" style="margin-right: 10px;"/>

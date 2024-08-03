@@ -39,76 +39,105 @@ UniHive is a comprehensive and efficient android application for managing club e
 
 ### 1. **User Authentication and Management**
 
-- Create and log in to accounts with email and password.
-- Administrators and super administrators validate and manage accounts.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>Create and log in to accounts with email and password.</li>
+  <li>Administrators and super administrators validate and manage accounts.</li>
+</ul>
 
 ### 2. **Event Management**
 
-- Announce, view, and reserve tickets for events.
-- Add reminders for upcoming events.
-- Evaluate and rate attended events.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>Announce, view, and reserve tickets for events.</li>
+  <li>Add reminders for upcoming events.</li>
+  <li>Evaluate and rate attended events.</li>
+</ul>
 
 ### 3. **Club Interaction**
 
-- Follow clubs to receive notifications about their activities.
-- Browse clubs by city, school, or interest area.
-- Evaluate and rate clubs based on experiences.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>Follow clubs to receive notifications about their activities.</li>
+  <li>Browse clubs by city, school, or interest area.</li>
+  <li>Evaluate and rate clubs based on experiences.</li>
+</ul>
 
 ### 4. **Calendar Integration**
 
-- View a comprehensive calendar of events including competitions, hackathons, and festivals.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>View a comprehensive calendar of events including competitions, hackathons, and festivals.</li>
+</ul>
 
 ## Overview
 
 ### 1. **Spring Boot Backend**
 
-- **Function**: Manages user accounts, events, and clubs. Handles user authentication, event creation, and club management. Provides RESTful APIs for the frontend to interact with.
-- **Tech Stack**: Java, Spring Boot, Supabase, JWT.
-- **Key Features**:
-  - User authentication and authorization.
-  - Event and club management.
-  - Integration with Supabase for user account management.
-  - Integration with Google Calendar for event scheduling.
-  - Integration with Google Cloud Platform for storage.
+<ul style="list-style-type: disc; padding-left: 20px;">
+  <li><strong>Function :</strong> Manages user accounts, events, and clubs. Handles user authentication, event creation, and club management. Provides RESTful APIs for the frontend to interact with.</li>
+  <li><strong>Tech Stack :</strong> Java, Spring Boot, Supabase, JWT.</li>
+  <li><strong>Key Features :</strong>
+    <ul style="list-style-type: disc; padding-left: 20px;">
+      <li>User authentication and authorization.</li>
+      <li>Event and club management.</li>
+      <li>Integration with Supabase for user account management.</li>
+      <li>Integration with Google Calendar for event scheduling.</li>
+      <li>Integration with Google Cloud Platform for storage.</li>
+    </ul>
+  </li>
+</ul>
 
 ### 2. **React Frontend**
 
-- **Function**: Provides a user-friendly interface for students to interact with the backend services. Allows users to create accounts, view events, and join clubs.
-- **Tech Stack**: TypeScript, React, Figma.
-- **Key Features**:
-- User account creation and login.
-- Event and club browsing.
-- Club following and event reservation.
-- Calendar integration for event scheduling.
+<ul style="list-style-type: disc; padding-left: 20px;">
+  <li><strong>Function :</strong> Provides a user-friendly interface for students to interact with the backend services. Allows users to create accounts, view events, and join clubs.</li>
+  <li><strong>Tech Stack :</strong> TypeScript, React, Figma.</li>
+  <li><strong>Key Features :</strong>
+    <ul style="list-style-type: disc; padding-left: 20px;">
+      <li>User account creation and login.</li>
+      <li>Event and club browsing.</li>
+      <li>Club following and event reservation.</li>
+      <li>Calendar integration for event scheduling.</li>
+    </ul>
+  </li>
+</ul>
 
 ### 3. **Deployment**
 
-- **Function**: Hosts the backend and frontend services on the Google Cloud Platform. Ensures high availability and scalability of the application.
-- **Tech Stack**: GitHub Actions.
-- **Key Features**:
-- Continuous integration and deployment.
+<ul style="list-style-type: disc; padding-left: 20px;">
+  <li><strong>Function :</strong> Hosts the backend and frontend services on the Google Cloud Platform. Ensures high availability and scalability of the application.</li>
+  <li><strong>Tech Stack :</strong> GitHub Actions.</li>
+  <li><strong>Key Features :</strong>
+    <ul style="list-style-type: disc; padding-left: 20px;">
+      <li>Continuous integration and deployment.</li>
+    </ul>
+  </li>
+</ul>
 
 ## Setup and Installation
 
 ### 1. **Prerequisites**
 
-- JDK
-- Node.js
-- npm or yarn
-- Supabase account
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>JDK</li>
+  <li>Node.js</li>
+  <li>npm or yarn</li>
+  <li>Supabase account</li>
+</ul>
 
 ### 2. **Backend Setup**
 
-- Clone the repository.
-- Set up a Supabase project and configure the environment variables.
-- Run the Spring Boot application.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>Clone the repository.</li>
+  <li>Set up a Supabase project and configure the environment variables.</li>
+  <li>Run the Spring Boot application.</li>
+</ul>
 
 ### 3. **Frontend Setup**
 
-- Clone the repository.
-- Install the dependencies using npm or yarn.
-- Configure the environment variables.
-- Run the React application.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>Clone the repository.</li>
+  <li>Install the dependencies using npm or yarn.</li>
+  <li>Configure the environment variables.</li>
+  <li>Run the React application.</li>
+</ul>
 
 <div style="display: flex; justify-content: center; padding-top: 40px">
   <img src="https://img.shields.io/github/stars/RitaSensei/UniHive-Web-App" alt="GitHub Stars" style="margin-right: 10px;"/>

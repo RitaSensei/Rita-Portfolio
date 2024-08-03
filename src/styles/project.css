@@ -1,5 +1,5 @@
 .project p {
-    @apply leading-7;
+    @apply leading-7 text-neutral-400;
   }
   
 .project code {
@@ -7,15 +7,11 @@
 }
 
 .project h2 {
-  @apply mt-6 text-3xl text-teal-300;
+  @apply mt-6 text-3xl text-teal-400;
 }
 
 .project h3 {
-  @apply mt-4 text-xl text-neutral-100;
-}
-
-.project code {
-  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-teal-500;
+  @apply mt-4 text-xl text-neutral-300;
 }
 
 .project a {
@@ -23,7 +19,7 @@
 }
 
 .project ul {
-  @apply list-disc;
+  @apply list-disc text-neutral-400;
 }
 
 .project blockquote {

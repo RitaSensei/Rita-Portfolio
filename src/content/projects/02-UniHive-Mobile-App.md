@@ -33,48 +33,67 @@ UniHive is a comprehensive and efficient android application for managing club e
 
 ### 1. **User Authentication and Management**
 
-- Create and log in to accounts with email and password.
-- Administrators and super administrators validate and manage accounts.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>Create and log in to accounts with email and password.</li>
+  <li>Administrators and super administrators validate and manage accounts.</li>
+</ul>
+
 
 ### 2. **Event Management**
 
-- Announce, view, and reserve tickets for events.
-- Add reminders for upcoming events.
-- Evaluate and rate attended events.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>Announce, view, and reserve tickets for events.</li>
+  <li>Add reminders for upcoming events.</li>
+  <li>Evaluate and rate attended events.</li>
+</ul>
 
 ### 3. **Club Interaction**
 
-- Follow clubs to receive notifications about their activities.
-- Browse clubs by city, school, or interest area.
-- Evaluate and rate clubs based on experiences.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>Follow clubs to receive notifications about their activities.</li>
+  <li>Browse clubs by city, school, or interest area.</li>
+  <li>Evaluate and rate clubs based on experiences.</li>
+</ul>
 
 ### 4. **Calendar Integration**
 
-- View a comprehensive calendar of events including competitions, hackathons, and festivals.
+<ul style="list-style-type: disc; padding-left: 30px;">
+  <li>View a comprehensive calendar of events including competitions, hackathons, and festivals.</li>
+</ul>
 
 ## Overview
 
 ### 1. **Spring Boot Backend**
 
-- **Function**: Manages user accounts, events, and clubs. Handles user authentication, event creation, and club management. Provides RESTful APIs for the frontend to interact with.
-- **Tech Stack**: Java, Spring Boot, Supabase, JWT.
-- **Key Features**:
-  - User authentication and authorization.
-  - Event and club management.
-  - Integration with Supabase for user account management.
-  - Integration with Google Calendar for event scheduling.
-  - Integration with Google Cloud Platform for storage.
+<ul style="list-style-type: disc; padding-left: 20px;">
+  <li><strong>Function :</strong> Manages user accounts, events, and clubs. Handles user authentication, event creation, and club management. Provides RESTful APIs for the frontend to interact with.</li>
+  <li><strong>Tech Stack :</strong> Java, Spring Boot, Supabase, JWT.</li>
+  <li><strong>Key Features :</strong>
+    <ul style="list-style-type: disc; padding-left: 20px;">
+      <li>User authentication and authorization.</li>
+      <li>Event and club management.</li>
+      <li>Integration with Supabase for user account management.</li>
+      <li>Integration with Google Calendar for event scheduling.</li>
+      <li>Integration with Google Cloud Platform for storage.</li>
+    </ul>
+  </li>
+</ul>
 
 ### 2. **Android Frontend**
 
-- **Function**: Provides a user-friendly interface for students to interact with the application. Allows users to create accounts, view events, and join clubs.
-- **Tech Stack**: Java, Android, Figma.
-- **Key Features**:
-  - User authentication and account creation.
-  - Event browsing and ticket reservation.
-  - Club discovery and membership.
-  - Calendar integration for event reminders.
-  - User rating and feedback system.
+<ul style="list-style-type: disc; padding-left: 20px;">
+  <li><strong>Function :</strong> Provides a user-friendly interface for students to interact with the application. Allows users to create accounts, view events, and join clubs.</li>
+  <li><strong>Tech Stack :</strong> Java, Android, Figma.</li>
+  <li><strong>Key Features :</strong>
+    <ul style="list-style-type: disc; padding-left: 20px;">
+      <li>User authentication and account creation.</li>
+      <li>Event browsing and ticket reservation.</li>
+      <li>Club discovery and membership.</li>
+      <li>Calendar integration for event reminders.</li>
+      <li>User rating and feedback system.</li>
+    </ul>
+  </li>
+</ul>
 
 <div style="display: flex; justify-content: center; padding-top: 40px">
   <img src="https://img.shields.io/github/stars/RitaSensei/UniHive-Mobile-App" alt="GitHub Stars" style="margin-right: 10px;"/>

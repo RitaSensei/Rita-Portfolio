@@ -25,69 +25,95 @@ const description = project.data.description;
 ---
 
 <Layout title={fulltitle} , description={description}>
-  <main class="project mx-auto flex md:w-10/12 w-11/12 flex-col gap-4">
-    <div role="list" class="flex flex-row gap-2 justify-center">
+  <div class="flex flex-col items-start -mt-6">
+    <a href="/" class="sticky -ml-24">
+      <img
+            src="/site_icon.png"
+            class=" h-12 w-fit rounded-lg items-start"
+            alt="Ghita's Portfolio"
+            transition:name="site icon image"
+          />
+    </a>
+    <main class="project mx-auto flex md:w-10/12 w-11/12 flex-col gap-4">
+      <div role="list" class="flex flex-row gap-2 justify-center">
+        {
+          project.data.github && (
+            <a
+              href={project.data.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+              class="text-teal-100 hover:text-teal-500 cursor-pointer"
+            >
+              <Icon name="iconoir:github" size={26} />
+            </a>
+          )
+        }
+        {project.data.github && project.data.website && <> / </>}
+        {
+          project.data.website && (
+            <a
+              href={project.data.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+              class="text-teal-100 hover:text-teal-500 cursor-pointer "
+            >
+              <Icon name="iconoir:www" size={26} />
+            </a>
+          )
+        }
+      </div>
+
       {
-        project.data.github && (
-          <a
-            href={project.data.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-            class="text-teal-100 hover:text-teal-500 cursor-pointer"
-          >
-            <Icon name="iconoir:github" size={26} />
-          </a>
+        project.data.image && project.data.image.src && (
+          <img
+            src={project.data.image.src}
+            class="h-auto w-full md:w-4/4 object-cover rounded-lg mx-auto"
+            alt={project.data.image.alt}
+            transition:name={`${project.data.image.src} image`}
+          />
         )
       }
-      {project.data.github && project.data.website && <> / </>}
+
       {
-        project.data.website && (
-          <a
-            href={project.data.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-            class="text-teal-100 hover:text-teal-500 cursor-pointer "
-          >
-            <Icon name="iconoir:www" size={26} />
-          </a>
+        project.data.technologies && (
+          <div class="flex flex-row gap-2 justify-center">
+            {project.data.technologies.map(
+              (tech: {
+                route: string | null | undefined;
+                name: string | null | undefined;
+              }) => {
+                return (
+                  <img
+                    src={tech.route}
+                    alt={`${tech.name}`}
+                    title={tech.name}
+                    class="h-7"
+                  />
+                );
+              },
+            )}
+          </div>
         )
       }
-    </div>
-
-    {
-      project.data.image && project.data.image.src && (
-        <img
-          src={project.data.image.src}
-          class="h-auto w-full md:w-4/4 object-cover rounded-lg mx-auto"
-          alt={project.data.image.alt}
-          transition:name={`${project.data.image.src} image`}
-        />
-      )
-    }
-
-    {
-      project.data.technologies && (
-        <div class="flex flex-row gap-2 justify-center">
-          {project.data.technologies.map(
-            (tech: {
-              route: string | null | undefined;
-              name: string | null | undefined;
-            }) => {
-              return (
-                <img
-                  src={tech.route}
-                  alt={`${tech.name}`}
-                  title={tech.name}
-                  class="h-7"
-                />
-              );
-            },
-          )}
-        </div>
-      )
-    }
-    <Content />
-  </main>
+      <Content />
+      <article>
+        <footer class="flex flex-col gap-2 mt-24 md:-mb-16 items-center">
+          <p class="text-base text-neutral-400 font-semibold">
+            Built by Ghita Loukili
+          </p>
+          <p class="text-sm text-neutral-400">
+            Design based on <a
+              href="https://brittanychiang.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer"
+              >Brittany Chiang portfolio</a
+            >
+          </p>
+        </footer>
+      </article>
+    </main>
+  </div>
 </Layout>

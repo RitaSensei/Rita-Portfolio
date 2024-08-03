@@ -21,13 +21,6 @@ const { label, icon, isUnderline, ...props } = Astro.props;
   rel="noreferrer"
   target="_blank"
 >
-  {icon && <Icon name={icon} class="social-icon" />}
+  {icon && <Icon name={icon} class="size-7" />}
   <span class="sr-only">{label} link</span>
 </a>
-
-<style>
-  .social-icon {
-    width: 24px;
-    height: 24px;
-  }
-</style>
