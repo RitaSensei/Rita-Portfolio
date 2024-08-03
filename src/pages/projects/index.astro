@@ -9,7 +9,7 @@ const projects = (await getCollection("projects")).sort((first, second) => {
 
 <Layout title="Ghita.L - All Projects">
   <div class="flex flex-col items-start -mt-6">
-    <a href="/" class="sticky -ml-24 pb-10">
+    <a href="/" onclick="navigateTo(event, '/')" class="sticky -ml-24 pb-10">
       <img
             src="/site_icon.png"
             class=" h-12 w-fit rounded-lg items-start"

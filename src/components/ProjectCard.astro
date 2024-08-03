@@ -20,6 +20,7 @@ const { title, description, slug, img_logo, image, imgAlt, technologies } = Astr
   class="group relative md:max-w-2xl cursor-pointer rounded-md p-4 transition-all duration-300 hover:-translate-y-2 hover:border border-neutral-400 z-10 bg-[size:5px_5px] hover:bg-[linear-gradient(to_right,#7f7f7f2e_1px,transparent_1px),linear-gradient(to_bottom,#7f7f7f2e_1px,transparent_1px)]"
   transition:name={`${image} image`}
   href={`/projects/${slug}`}
+  onclick="navigateTo(event, `/projects/${slug}`)"
 >
   <div class="flex md:flex-row flex-col-reverse gap-4">
     <div class="relative md:h-24 md:w-60 sm:w-32 sm:h-20 min-w-24 min-h-16 overflow-hidden rounded-md md:items-center self-start">
