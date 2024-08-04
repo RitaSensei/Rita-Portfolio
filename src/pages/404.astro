@@ -4,38 +4,34 @@ import { Icon } from "astro-icon/components";
 ---
 
 <Layout title="Rita - 404 Not Found">
-  <main class="flex flex-col gap-20">
-    <article class="max-w-6xl mx-auto px-3">
-      <header class="mx-auto max-w-3xl text-center content">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="align-bottom email-icon-vibration"
-          width="240"
-          height="240"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="teal"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M3 7v4a1 1 0 0 0 1 1h3"></path>
-          <path d="M7 7v10"></path>
-          <path
-            d="M10 8v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1 -1v-8a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1z"
-          ></path>
-          <path d="M17 7v4a1 1 0 0 0 1 1h3"></path>
-          <path d="M21 7v10"></path>
-        </svg>
-        <div class="flex flex-col items-center justify-center gap-4 mt-4">
-          <p class="text-3xl">Not Found</p>
-          <a href="/" class="flex items-center text-teal-500 hover:underline">
-            <Icon name="mdi:arrow-back" class="w-7 h-5" />
-            Go back home
-          </a>
-        </div>
-      </header>
+  <main class="mx-auto mt-20">
+    <article class="flex flex-col max-w-6xl text-center items-stretch">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="align-bottom"
+        width="240"
+        height="240"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="teal"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 7v4a1 1 0 0 0 1 1h3"></path>
+        <path d="M7 7v10"></path>
+        <path d="M10 8v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1 -1v-8a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1z"></path>
+        <path d="M17 7v4a1 1 0 0 0 1 1h3"></path>
+        <path d="M21 7v10"></path>
+      </svg>
+      <div class="flex flex-col items-center justify-center gap-4 -mt-1 ml-6">
+        <p class="text-4xl">Not Found</p>
+        <a href="/" class="flex items-center text-teal-500 hover:underline text-lg">
+          <Icon name="mdi:arrow-back" class="w-7 h-5" />
+          Go back home
+        </a>
+      </div>
     </article>
   </main>
 </Layout>
