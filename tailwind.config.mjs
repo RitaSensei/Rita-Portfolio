@@ -9,10 +9,10 @@ export default {
       'xs': '400px',
       ...defaultTheme.screens,
     },
+    fontFamily: {
+      sans: ["Playpen Sans", ...defaultTheme.fontFamily.sans],
+    },
     extend: {
-      fontFamily: {
-        sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
-      },
       keyframes: {
         tilt: {
           '0%, 100%': { transform: 'rotate(0deg)' },
