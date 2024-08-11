@@ -114,6 +114,6 @@ const projects = (await getCollection("projects")).sort((first, second) => {
       // Scrolling up
       headerContainer.style.transform = 'translateY(0)';
     }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 </script>
