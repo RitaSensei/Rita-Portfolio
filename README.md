@@ -1,54 +1,52 @@
-# Astro Starter Kit: Basics
+# Rita's Portfolio (V1)
 
-```sh
-npm create astro@latest -- --template basics
+Hey there, this is my personal portfolio website built with Astro. It's a simple and clean website that showcases my experience, projects and skills. This portfolio is inspired from [Gorka](https://gorka.iand.dev) while the design is based on [Brittany Chiang Portfolio](https://brittanychiang.com).
+
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/rita-portfolio)
+
+# ⚙️ Stack used
+- ☄️ Astro
+- 🍃 Tailwind CSS
+- ⚔️ TypeScript
+
+<p aligh="center">
+    <img src="public/projects_images/rita_portfolio_banner.png"/>
+</p>
+
+# 🛠️ Installation & Set Up
+
+Here's how you can get started on the project :
+
+1. Clone the repository
+```bash
+git clone https://github.com/RitaSensei/Rita-Portfolio
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+2. Navigate to the project directory
+```bash
+cd rita-portfolio
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. Install the dependencies
+```bash
+npm install
+```
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+4. Start the development server
+```bash
+npm run dev
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+# 📢Deploy on Vercel
 
-## 🧞 Commands
+You can deploy your Astro site using [Vercel](https://vercel.com) by following this guide : [Deploy your Astro Site to Vercel](https://docs.astro.build/en/guides/deploy/vercel/)
 
-All commands are run from the root of the project, from a terminal:
+# 🤝 Connect With Me
+You can reach out to me on :
+- LinkedIn : [Ghita Loukili](https://www.linkedin.com/in/ghita-loukili-46405924a/)
+- X : [Rita](https://x.com/GhitaSensei)
+- Email : [ghitaloukili@gmail.com](mailto:ghitaloukili@gmail.com)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+# 💡 Learn More
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [our documentation](https://docs.astro.build) to learn more about Astro, you can also the check the [Astro Github repository](https://github.com/withastro/astro).
