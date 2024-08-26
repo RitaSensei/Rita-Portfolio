@@ -13,7 +13,7 @@ github: "https://github.com/RitaSensei/UniHive-Mobile-App"
 technologies:
   - name: "Java"
     route: "/tech_logos/java.svg"
-  - name: "Android"
+  - name: "Android Studio"
     route: "/tech_logos/android.svg"
   - name: "Spring Boot"
     route: "/tech_logos/spring_boot.svg"

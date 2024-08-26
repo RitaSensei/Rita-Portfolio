@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 
 const projects = (await getCollection("projects")).sort((first, second) => {
   return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
@@ -8,97 +9,91 @@ const projects = (await getCollection("projects")).sort((first, second) => {
 ---
 
 <Layout title="Ghita.L - All Projects">
-  <div class="flex flex-col items-start -mt-16 overflow-x-visible">
-    <div id="header-container" class="w-[calc(100vw)] -ml-40 pt-3 pb-2 pl-10 sticky top-0 z-50 bg-transparent backdrop-blur-3xl transition-transform duration-300 ease-in-out">
-      <a href="/" onclick="navigateTo(event, '/')">
-        <img
-              src="/site_icon.png"
-              class=" h-12 w-12 rounded-lg items-start"
-              alt="Ghita's Portfolio"
-              transition:name="site icon image"
-            />
+  <main class="flex flex-col gap-12 pt-10" transition:animate="slide">
+    <div class="flex flex-row justify-between">
+      <a href="/" onclick="navigateTo(event, '/')" class="flex flex-row align-middle items-center gap-1 group text-neutral-100 hover:text-teal-400">
+        <Icon name="ic:round-arrow-back" size={20} class="transform transition-transform duration-300 group-hover:-translate-x-2"/>
+        <h4 class="text-lg">Home</h4>
       </a>
+      <h1 class="text-4xl text-neutral-100 text-center flex-grow justify-center mr-32">All Projects</h1>
     </div>
-    <main class="flex flex-col gap-12 pt-10" transition:animate="slide">
-      <h1 class="text-4xl text-neutral-100 text-center">All Projects</h1>
-      <article class="flex flex-col gap-4">
-        {
-          projects.map((project) => (
-            <a
-              class="group flex flex-col gap-2 border-t border-neutral-700 py-4 transition-all"
-              href={`/projects/${project.slug}`}
-            >
-              <div class="flex w-full items-center justify-between">
-                <h2 class="text-lg text-teal-100 group-hover:text-teal-500">
-                  {project.data.title}
-                </h2>
-                <div class="flex flex-row items-center gap-4">
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    class="transition-all duration-300 group-hover:translate-x-1"
-                  >
-                    <path
-                      d="M5.25 12.75L12.75 5.25"
-                      stroke="#14b8a5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M5.25 5.25H12.75V12.75"
-                      stroke="#14b8a5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+    <article class="flex flex-col gap-4">
+      {
+        projects.map((project) => (
+          <a
+            class="group flex flex-col gap-2 border-t border-neutral-700 py-4 transition-all"
+            href={`/projects/${project.slug}`}
+          >
+            <div class="flex w-full items-center justify-between">
+              <h2 class="text-lg text-teal-100 group-hover:text-teal-500">
+                {project.data.title}
+              </h2>
+              <div class="flex flex-row items-center gap-4">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  class="transition-all duration-300 group-hover:translate-x-1"
+                >
+                  <path
+                    d="M5.25 12.75L12.75 5.25"
+                    stroke="#14b8a5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.25 5.25H12.75V12.75"
+                    stroke="#14b8a5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <p>{project.data.description}</p>
+            <div class="flex flex-row flex-wrap pt-4 gap-2">
+              {project.data.technologies && (
+                <div class="flex flex-row gap-2">
+                  {project.data.technologies.map(
+                    (tech: {
+                      route: string | null | undefined;
+                      name: string | null | undefined;
+                    }) => {
+                      return (
+                        <img
+                          src={tech.route}
+                          alt={`${tech.name}`}
+                          title={tech.name}
+                          class="h-6"
+                        />
+                      );
+                    },
+                  )}
                 </div>
-              </div>
-              <p>{project.data.description}</p>
-              <div class="flex flex-row flex-wrap pt-4 gap-2">
-                {project.data.technologies && (
-                  <div class="flex flex-row gap-2">
-                    {project.data.technologies.map(
-                      (tech: {
-                        route: string | null | undefined;
-                        name: string | null | undefined;
-                      }) => {
-                        return (
-                          <img
-                            src={tech.route}
-                            alt={`${tech.name}`}
-                            title={tech.name}
-                            class="h-6"
-                          />
-                        );
-                      },
-                    )}
-                  </div>
-                )}
-              </div>
-            </a>
-          ))
-        }
-      </article>
-      <article>
-        <footer class="flex flex-col gap-2 mt-24 md:-mb-16 items-center">
-          <p class="text-base text-neutral-400 font-semibold">
-            Built by Ghita Loukili
-          </p>
-          <p class="text-sm text-neutral-400">
-            Design based on <a
-              href="https://brittanychiang.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer"
-              >Brittany Chiang portfolio</a
-            >
-          </p>
-        </footer>
-      </article>
-    </main>
-  </div>
+              )}
+            </div>
+          </a>
+        ))
+      }
+    </article>
+    <article>
+      <footer class="flex flex-col gap-2 mt-24 md:-mb-16 items-center">
+        <p class="text-base text-neutral-400 font-semibold">
+          Built by Ghita Loukili
+        </p>
+        <p class="text-sm text-neutral-400">
+          Design based on <a
+            href="https://brittanychiang.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer"
+            >Brittany Chiang portfolio</a
+          >
+        </p>
+      </footer>
+    </article>
+  </main>
 </Layout>
 
 <script>

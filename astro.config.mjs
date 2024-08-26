@@ -14,6 +14,7 @@ export default defineConfig({
         pajamas: ["*"],
         "lets-icons": ["*"],
         mingcute: ["*"],
+        ic: ["*"],
       },
     }),
   ],

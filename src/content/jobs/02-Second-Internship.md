@@ -10,9 +10,8 @@ country: "Morocco"
 startDate: 2024-07-01
 endDate: 2024-08-15
 achievements:
-  - "Automated end-to-end tests and non-regression tests using Cypress and Cucumber, significantly improving the efficiency of the testing process within the context of a monitoring project."
-  - "Collaborated with development teams to identify and resolve critical issues, enhancing the overall stability of the application."
-  - "To fill later"
+  - "Automated non-regression tests using Cypress and Cucumber, significantly improving the efficiency of the testing process within the context of a monitoring project."
+  - "Collaborated with the development teams to identify and resolve critical issues, enhancing the overall stability of the application."
 technologies:
   - name: "Typescript"
     route: "/tech_logos/typescript.svg"

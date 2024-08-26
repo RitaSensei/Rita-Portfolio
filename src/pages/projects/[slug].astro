@@ -20,24 +20,18 @@ type Props = {
 const { project } = Astro.props;
 const { Content } = await project.render();
 export const prerender = true;
-const fulltitle = "Ghita.L - " + project.data.title;
+const fulltitle =project.data.title + " | Ghita.L";
 const description = project.data.description;
 ---
 
 <Layout title={fulltitle} , description={description}>
-  <div class="flex flex-col items-start -mt-16 overflow-x-visible">
-    <div id="header-container" class="w-[calc(100vw)] -ml-40 pt-3 pb-2 pl-10 sticky top-0 z-50 bg-transparent backdrop-blur-3xl transition-transform duration-300 ease-in-out">
-      <a href="/" onclick="navigateTo(event, '/')">
-        <img
-              src="/site_icon.png"
-              class=" h-12 w-12 rounded-lg items-start"
-              alt="Ghita's Portfolio"
-              transition:name="site icon image"
-            />
+  <main class="project mx-auto flex md:w-10/12 w-11/12 flex-col gap-4 pt-12">
+    <div class="flex flex-row justify-between">
+      <a href="/projects" onclick="navigateTo(event, '/projects')" class="flex flex-row align-middle items-center gap-1 group">
+        <Icon name="ic:round-arrow-back" size={22} class="transform transition-transform duration-300 group-hover:-translate-x-2"/>
+        <h4 class="text-lg">All Projects</h4>
       </a>
-    </div>
-    <main class="project mx-auto flex md:w-10/12 w-11/12 flex-col gap-4 pt-12">
-      <div role="list" class="flex flex-row gap-2 justify-center">
+      <div role="list" class="flex-grow flex mr-32 gap-2 justify-center">
         {
           project.data.github && (
             <a
@@ -66,58 +60,59 @@ const description = project.data.description;
           )
         }
       </div>
+    </div>
+    
+    {
+      project.data.image && project.data.image.src && (
+        <img
+          src={project.data.image.src}
+          class="h-auto w-full md:w-4/4 object-cover rounded-lg mx-auto"
+          alt={project.data.image.alt}
+          transition:name={`${project.data.image.src} image`}
+          loading="lazy"
+        />
+      )
+    }
 
-      {
-        project.data.image && project.data.image.src && (
-          <img
-            src={project.data.image.src}
-            class="h-auto w-full md:w-4/4 object-cover rounded-lg mx-auto"
-            alt={project.data.image.alt}
-            transition:name={`${project.data.image.src} image`}
-          />
-        )
-      }
-
-      {
-        project.data.technologies && (
-          <div class="flex flex-row gap-2 justify-center">
-            {project.data.technologies.map(
-              (tech: {
-                route: string | null | undefined;
-                name: string | null | undefined;
-              }) => {
-                return (
-                  <img
-                    src={tech.route}
-                    alt={`${tech.name}`}
-                    title={tech.name}
-                    class="h-7"
-                  />
-                );
-              },
-            )}
-          </div>
-        )
-      }
-      <Content />
-      <article>
-        <footer class="flex flex-col gap-2 mt-24 md:-mb-16 items-center">
-          <p class="text-base text-neutral-400 font-semibold">
-            Built by Ghita Loukili
-          </p>
-          <p class="text-sm text-neutral-400">
-            Design based on <a
-              href="https://brittanychiang.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer"
-              >Brittany Chiang portfolio</a
-            >
-          </p>
-        </footer>
-      </article>
-    </main>
-  </div>
+    {
+      project.data.technologies && (
+        <div class="flex flex-row gap-2 justify-center">
+          {project.data.technologies.map(
+            (tech: {
+              route: string | null | undefined;
+              name: string | null | undefined;
+            }) => {
+              return (
+                <img
+                  src={tech.route}
+                  alt={`${tech.name}`}
+                  title={tech.name}
+                  class="h-7"
+                />
+              );
+            },
+          )}
+        </div>
+      )
+    }
+    <Content />
+    <article>
+      <footer class="flex flex-col gap-2 mt-24 md:-mb-16 items-center">
+        <p class="text-base text-neutral-400 font-semibold">
+          Built by Ghita Loukili
+        </p>
+        <p class="text-sm text-neutral-400">
+          Design based on <a
+            href="https://brittanychiang.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-teal-500 transition duration-300 ease-in-out cursor-pointer"
+            >Brittany Chiang portfolio</a
+          >
+        </p>
+      </footer>
+    </article>
+  </main>
 </Layout>
 <script>
   let lastScrollTop = 0;
